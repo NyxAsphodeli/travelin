@@ -1,11 +1,18 @@
 import Layout from "../components/Layout"
+import { AppContext, AppProvider } from "../service/AppContext"
 import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AppProvider>
+      <AppContext.Consumer>
+        {() => (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        )}
+      </AppContext.Consumer>
+    </AppProvider>
   )
 }
 
