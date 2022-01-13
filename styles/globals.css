@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+button {
+  background-color: #e4f9f6;
+  border: 0px;
+}
+button:hover {
+  background-color: #afdec3;
+}
