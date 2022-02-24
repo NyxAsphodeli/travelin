@@ -104,7 +104,13 @@ export default function Home() {
             />
           </div>
           <div
-            style={{ width: "30vw", display: "flex", justifyContent: "right" }}
+            style={{
+              width: "20vw",
+              display: "flex",
+              justifyContent: "right",
+              height: "20vw",
+              marginBlock: "auto",
+            }}
           >
             <button
               onClick={() => {
