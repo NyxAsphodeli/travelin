@@ -1,6 +1,8 @@
 function Valori() {
   return (
-    <>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <h1 style={{ color: "#004267", fontSize: "2.2rem", fontWeight: "700" }}>
         {"Valore all'Accessibilità"}
       </h1>
@@ -29,7 +31,7 @@ function Valori() {
       >
         Sei pronto/a ad abbattere i limiti?
       </p>
-    </>
+    </div>
   )
 }
 export default Valori

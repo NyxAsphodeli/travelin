@@ -11,10 +11,11 @@ const Layout = ({ children }) => {
 
   return (
     <Col
-      /* className="col-10 offset-1  col-lg-3 offset-lg-4 col-xl-6 offset-xl-3 " */
-      className="col-12 offset-0 col-md-6"
+      className="col-12 offset-0 col-10 col-lg-3 offset-lg-4 col-xl-6 offset-xl-3 "
+      /* className="col-12 offset-0 col-md-6" */
       style={{
         display: "flow-root",
+        padding: "4px",
         paddingTop: "10px",
         width: `100vw`,
         maxWidth: "99.4%",

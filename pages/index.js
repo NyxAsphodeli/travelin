@@ -8,11 +8,70 @@ import Contatti from "./contatti"
 import background from "../public/background.png"
 import menu from "../public/menu.png"
 import logoS from "../public/logo-s.png"
+import Logo from "../public/Logo.png"
+
+import Alessio from "../public/Alessio.jpeg"
+import Dajana from "../public/Dajana.jpg"
+import Denise from "../public/Denise.jpg"
+import Laura from "../public/Laura.jpeg"
+import Marta from "../public/Marta.jpg"
+import Silvia from "../public/Silvia.jpg"
+
+const teamMembers = [
+  {
+    nome: "Marta",
+    cognome: "Grelli",
+    ruolo: "C.E.O. / C.T.O.",
+    descrizione: "Intraprendente, adora viaggiare.",
+    foto: Marta,
+  },
+  {
+    nome: "Dajana",
+    cognome: "Gioffrè",
+    ruolo: "Accessibility Expert",
+    descrizione: "Animo intrepido, con la passione dei cani.",
+    foto: Dajana,
+  },
+  {
+    nome: "Laura",
+    cognome: "Mongi",
+    ruolo: "Front-end developer",
+    descrizione: "Nerd, adoratrice di gatti.",
+    foto: Laura,
+  },
+  {
+    nome: "Alessio",
+    cognome: "Massaglia",
+    ruolo: "Front-end developer",
+    descrizione: "Determinato, amante della musica.",
+    foto: Alessio,
+  },
+  {
+    nome: "Denise",
+    cognome: "Basano",
+    ruolo: "Graphic Designer",
+    descrizione: "Dolce, come i biscotti che divora.",
+    foto: Denise,
+  },
+  {
+    nome: "Silvia",
+    cognome: "Parisi",
+    ruolo: "Social Media Manager",
+    descrizione: "Dolce, come i biscotti che divora.",
+    foto: Silvia,
+  },
+]
 
 export default function Home() {
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      className="home"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        paddingInline: "5px",
+      }}
     >
       <Head>
         <title>Travelin</title>
@@ -25,7 +84,7 @@ export default function Home() {
           style={{
             background: "#e4f9f6",
             height: "15vh",
-            width: "100vw",
+            width: "100%",
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
@@ -65,14 +124,35 @@ export default function Home() {
           <Image src={background} alt="header image" className={styles.logoS} />
           <p className={styles.phrase}>Una nuova app sul turismo accessibile</p>
         </div>
-        <div style={{ paddingInline: "5vw" }}>
+        <div /* style={{ paddingInline: "5vw" }} */>
           <div style={{ height: "15vh" }} />
           <Valori />
           <div
-            className={styles.penguin}
-            style={{ height: "15vh", width: "100vw" }}
-          />
-          <Team />
+            /*  className={styles.penguin} */
+            style={{
+              height: "auto",
+              width: "100vw",
+              marginBlock: "70px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <Image src={Logo} alt="menu" />
+            </div>
+            <div
+              style={{
+                width: "70vw",
+                textAlign: "center",
+                marginBlockStart: "70px",
+              }}
+            >
+              <p>SELEZIONA GLI ELEMENTI DEL PINGUINO PER SAPERNE DI PIù</p>
+            </div>
+          </div>
+
+          <Team members={teamMembers} />
           <Partners />
         </div>
       </main>
