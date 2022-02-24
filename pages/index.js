@@ -75,13 +75,13 @@ export default function Home() {
     >
       <Head>
         <title>Travelin</title>
-        <link rel="icon" href={logoS} />
+        <link rel="icon" href="../public/logo-s.png" />
         <meta
           name="description"
           property="og:description"
           content={`Travelin official website`}
         />
-        <meta property="og:image" content={Logo} />
+        <meta property="og:image" content="../public/Logo.png" />
         <meta name="og:title" content="Travelin" />
       </Head>
 
