@@ -3,7 +3,15 @@ function Valori() {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h1 style={{ color: "#004267", fontSize: "2.2rem", fontWeight: "700" }}>
+      <h1
+        style={{
+          color: "#004267",
+          fontSize: "2.2rem",
+          fontWeight: "700",
+          textAlign: "center",
+          marginBlockEnd: "5vh",
+        }}
+      >
         {"Valore all'Accessibilità"}
       </h1>
       <p

@@ -153,8 +153,10 @@ export default function Home() {
           </div>
 
           <Team members={teamMembers} />
+          <div style={{ height: "15vh" }} />
           <Partners />
         </div>
+        <div style={{ height: "15vh" }} />
       </main>
 
       <footer>

@@ -19,9 +19,13 @@ function Team({ members }) {
           style={{
             margin: "0px",
             padding: "0px",
+            marginBlockEnd: "5vh",
           }}
         >
-          <h1 className={styles.names} style={{ fontSize: "1.7rem" }}>
+          <h1
+            className={styles.names}
+            style={{ fontSize: "2.2rem", fontWeight: 700 }}
+          >
             Il nostro fantastico Team
           </h1>
         </div>
