@@ -75,8 +75,14 @@ export default function Home() {
     >
       <Head>
         <title>Travelin</title>
-        <meta name="description" content="Travelin official website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={logoS} />
+        <meta
+          name="description"
+          property="og:description"
+          content={`Travelin official website`}
+        />
+        <meta property="og:image" content={Logo} />
+        <meta name="og:title" content="Travelin" />
       </Head>
 
       <main>
