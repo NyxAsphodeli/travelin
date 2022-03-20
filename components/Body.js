@@ -6,6 +6,9 @@ import HowToCard from "./cards/HowToCard"
  https://i.ibb.co/VVRkB7G/Scopri-576-862.png
  https://i.ibb.co/7zgY4xW/Esplora-576-862.png
  https://i.ibb.co/FVNfSbn/Immergiti-576-862.png
+
+ https://i.ibb.co/Dg9F5qw/beautiful-Penguin-Girl.jpg
+https://i.ibb.co/72sf5LS/ice-Penguin-Cream.jpg
 */
 const Body = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
@@ -38,17 +41,29 @@ const Body = ({ children }) => {
                 flexDirection: "column",
                 alignItems: "center",
                 width: "100%",
-                paddingInline: "20%",
+                textAlign: "left",
+                paddingInlineStart: "0px",
               }
         }
       >
         <p
-          style={{
-            fontSize: "2em",
-            textAlign: "left",
-          }}
+          style={
+            screenWindow.width < 768
+              ? {
+                  fontSize: "1.6em",
+                  marginInline: "0px",
+                  textAlign: "left",
+                }
+              : {
+                  fontSize: "2em",
+                  padding: "0px",
+                  marginInlineStart: "-20vw",
+                  textAlign: "left",
+                  marginBlock: "20px",
+                }
+          }
         >
-          Come funziona Travelin?
+          <b> {`Come funziona Travelin?`}</b>
         </p>
         <div
           style={
@@ -76,6 +91,251 @@ const Body = ({ children }) => {
             text={`Colleziona esperienze uniche. Esplora angoli nascosti e caratteristici.`}
             image={`https://i.ibb.co/7zgY4xW/Esplora-576-862.png`}
           />
+        </div>
+        <p
+          style={
+            screenWindow.width < 768
+              ? {
+                  fontSize: "2rem",
+                  marginInline: "0px",
+                  textAlign: "left",
+                }
+              : {
+                  fontSize: "2.4rem",
+                  padding: "0px",
+                  textAlign: "left",
+                  marginBlock: "20px",
+                  alignSelf: "flex-start",
+                  paddingInlineStart: "0px !important",
+                }
+          }
+        >
+          <b> {`I suoi valori fondanti`}</b>
+        </p>
+        <div
+          style={
+            screenWindow.width < 768
+              ? {
+                  display: "flex",
+                  flexDirection: "column-reverse",
+                  marginInline: "0px",
+                  textAlign: "left",
+                }
+              : {
+                  display: "flex",
+                  flexDirection: "row",
+
+                  fontSize: "2em",
+                  padding: "0px",
+                  textAlign: "left",
+                  marginBlockEnd: "20px",
+                }
+          }
+        >
+          <div
+            style={
+              screenWindow.width < 768
+                ? {
+                    display: "flex",
+                    flexDirection: "column",
+                    marginInline: "0px",
+                    textAlign: "left",
+                    paddingInline: "5%",
+                  }
+                : {
+                    display: "flex",
+                    flexDirection: "column",
+
+                    fontSize: "2em",
+                    padding: "0px",
+                    textAlign: "left",
+                    marginBlock: "20px",
+                  }
+            }
+          >
+            <p
+              style={
+                screenWindow.width < 768
+                  ? {
+                      fontSize: "1.6rem",
+                      marginInline: "0px",
+                      textAlign: "left",
+                    }
+                  : {
+                      fontSize: "1.4rem",
+                      padding: "0px",
+                      textAlign: "left",
+                      marginBlock: "20px",
+                    }
+              }
+            >
+              <b> {`Un turismo sostenibile`}</b>
+            </p>
+            <p
+              style={
+                screenWindow.width < 768
+                  ? {
+                      fontSize: "1rem",
+                      marginInline: "0px",
+                      textAlign: "left",
+                    }
+                  : {
+                      fontSize: "1.2rem",
+                      padding: "0px",
+                      textAlign: "left",
+                      marginBlock: "20px",
+                    }
+              }
+            >
+              {`Le `}
+              <b>{`esperienze `}</b>
+              {`indimenticabili sono quelle che ti mettono `}
+              <b>{`in contatto con la gente `}</b>
+              {`del luogo, le botteghe tipiche e le antiche `}
+              <b>{`ricette di famiglia.`}</b>
+              <br></br>
+              <b>{`Il turismo sostenibile è sotto casa.`}</b>
+            </p>
+          </div>
+          <div
+            style={
+              screenWindow.width < 768
+                ? {
+                    display: "flex",
+                    flexDirection: "column",
+                    marginInline: "0px",
+                    textAlign: "left",
+                  }
+                : {
+                    display: "flex",
+                    flexDirection: "column",
+
+                    fontSize: "2em",
+                    padding: "0px",
+                    textAlign: "left",
+                    marginBlock: "20px",
+                  }
+            }
+          >
+            <Image
+              src="https://i.ibb.co/72sf5LS/ice-Penguin-Cream.jpg"
+              alt="illustrazione"
+              width="775"
+              height="724"
+            />
+          </div>
+        </div>
+        <div
+          style={
+            screenWindow.width < 768
+              ? {
+                  display: "flex",
+                  flexDirection: "column",
+                  marginInline: "0px",
+                  textAlign: "left",
+                }
+              : {
+                  display: "flex",
+                  flexDirection: "row",
+
+                  fontSize: "2em",
+                  padding: "0px",
+                  textAlign: "left",
+                  marginBlock: "20px",
+                }
+          }
+        >
+          <div
+            style={
+              screenWindow.width < 768
+                ? {
+                    display: "flex",
+                    flexDirection: "column",
+                    marginInline: "0px",
+                    textAlign: "left",
+                  }
+                : {
+                    display: "flex",
+                    flexDirection: "column",
+
+                    fontSize: "2em",
+                    padding: "0px",
+                    textAlign: "left",
+                    marginBlock: "20px",
+                  }
+            }
+          >
+            <Image
+              src="https://i.ibb.co/Dg9F5qw/beautiful-Penguin-Girl.jpg"
+              alt="illustrazione"
+              width="783"
+              height="697"
+            />
+          </div>
+          <div
+            style={
+              screenWindow.width < 768
+                ? {
+                    display: "flex",
+                    flexDirection: "column",
+                    marginInline: "0px",
+                    textAlign: "left",
+                    paddingInline: "5%",
+                  }
+                : {
+                    display: "flex",
+                    flexDirection: "column",
+
+                    fontSize: "2em",
+                    padding: "0px",
+                    textAlign: "left",
+                    marginBlock: "20px",
+                  }
+            }
+          >
+            <p
+              style={
+                screenWindow.width < 768
+                  ? {
+                      fontSize: "1.6rem",
+                      marginInline: "0px",
+                      textAlign: "left",
+                    }
+                  : {
+                      fontSize: "1.4rem",
+                      padding: "0px",
+                      textAlign: "left",
+                      marginBlock: "20px",
+                    }
+              }
+            >
+              <b> {`Progettato per tutti`}</b>
+            </p>
+            <p
+              style={
+                screenWindow.width < 768
+                  ? {
+                      fontSize: "1rem",
+                      marginInline: "0px",
+                      textAlign: "left",
+                    }
+                  : {
+                      fontSize: "1.2rem",
+                      padding: "0px",
+                      textAlign: "left",
+                      marginBlock: "20px",
+                    }
+              }
+            >
+              {`La vita quotidiana è progettata per le persone comuni. Esistono però  `}
+              <b>{`individua extra-ordinari `}</b>
+              {`che ci permettono di `}
+              <b>{`andare oltre `}</b>
+              {`i limiti della nostra realtà`}
+              <br></br>
+              <b>{`Progettiamo tenendo in considerazione i bisogni di tutte le persone`}</b>
+            </p>
+          </div>
         </div>
       </div>
     )

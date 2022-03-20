@@ -24,12 +24,14 @@ const Video = ({ children }) => {
                 marginInline: "30%",
                 width: "100vw",
                 height: "auto",
+                backgroundColor: "#e4f9f6",
               }
             : {
                 padding: "0px",
                 width: "80vw",
 
                 marginBlockStart: "40px",
+                backgroundColor: "#e4f9f6",
               }
         }
       >
