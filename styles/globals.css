@@ -21,3 +21,16 @@ button {
 button:hover {
   background-color: #afdec3;
 }
+p {
+  text-align: center;
+  margin-inline: 10%;
+  padding-block: 1rem;
+  margin-block: 0px;
+
+  color: rgb(0, 66, 103);
+}
+div {
+  color: rgb(0, 66, 103);
+  margin: 0px;
+  padding: 0px;
+}

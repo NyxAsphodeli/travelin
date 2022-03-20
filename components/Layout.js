@@ -1,4 +1,3 @@
-import { Col } from "react-bootstrap"
 import React, { useEffect, useState } from "react"
 const Layout = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
@@ -6,23 +5,39 @@ const Layout = ({ children }) => {
     typeof document !== undefined
       ? require("bootstrap/dist/css/bootstrap.min.css")
       : null
-    window ? setScreenWindow(window) : console.log("no window")
+    typeof window !== undefined
+      ? setScreenWindow(window.screen)
+      : console.log("no window")
   }, [])
-
-  return (
-    <Col
-      className="col-12 offset-0 col-10 col-lg-3 offset-lg-4 col-xl-6 offset-xl-3 "
-      /* className="col-12 offset-0 col-md-6" */
-      style={{
-        display: "flow-root",
-        padding: "4px",
-        paddingTop: "10px",
-        width: `100vw`,
-        maxWidth: "99.4%",
-      }}
-    >
-      {children}
-    </Col>
-  )
+  if (screenWindow !== "") {
+    console.log(screenWindow)
+    return (
+      <div
+        /*       className="col-12 offset-0 col-10 offset-2 "
+         */ /* className="col-12 offset-0 col-md-6" */
+        style={
+          screenWindow.width < "768"
+            ? {
+                display: "flex",
+                flexDirection: "column",
+                padding: "0px",
+                margin: "0px",
+                minWidth: "100vw",
+              }
+            : {
+                display: "flex",
+                flexDirection: "column",
+                padding: "0px",
+                width: "100vw",
+                paddingInline: "10%",
+              }
+        }
+      >
+        {children}
+      </div>
+    )
+  } else {
+    return <p>loading</p>
+  }
 }
 export default Layout

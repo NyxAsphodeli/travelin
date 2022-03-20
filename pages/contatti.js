@@ -2,7 +2,7 @@ import Image from "next/image"
 import travelinlight from "../public/travelinlight.png"
 import insta from "../public/insta.png"
 import share from "../public/share.png"
-
+import styles from "../styles/Home.module.css"
 function Contatti() {
   return (
     <div
@@ -10,8 +10,8 @@ function Contatti() {
         minHeight: "20vh",
         maxHeight: "20vh",
         backgroundColor: "#004267",
-        maxWidth: "100vw",
-        minWidth: "100vw",
+        maxWidth: "100%",
+        minWidth: "100%",
         display: "flex",
         color: "#deefef",
         justifyContent: "space-around",
@@ -35,8 +35,9 @@ function Contatti() {
           <Image src={travelinlight} alt="logo travelin" />
         </div>
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <Image src={share} alt="logo travelin" />
-          <Image src={insta} alt="logo travelin" />
+          <Image src={share} alt="share travelin" />
+          <Image src={insta} alt="insta travelin" />
+          <Image src={insta} alt="linkedin travelin" />
         </div>
       </div>
       <div
@@ -47,9 +48,33 @@ function Contatti() {
           justifyContent: "space-evenly",
         }}
       >
-        <p style={{ margin: "0px", padding: "0px" }}>Contattaci</p>
-        <p style={{ margin: "0px", padding: "0px" }}>Privacy Policy</p>
-        <p style={{ margin: "0px", padding: "0px" }}>Cookies</p>
+        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+          Chi siamo
+        </p>
+        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+          Investi
+        </p>
+        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+          Contattaci
+        </p>
+      </div>
+      <div
+        className="contatti"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+          {`Scarica l'app`}
+        </p>
+        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+          Privacy Policy
+        </p>
+        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+          Cookies
+        </p>
       </div>
     </div>
   )
