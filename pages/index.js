@@ -8,6 +8,9 @@ import Logo from "../public/Logo.png"
 import Header from "../components/Header"
 import Body from "../components/Body"
 import Explore from "../components/Explore"
+import Invest from "../components/Invest"
+import Ambassadors from "../components/Ambassadors"
+import Video from "../components/Video"
 
 /* 
 https://i.ibb.co/Jj9Q3tS/Marta.jpg
@@ -67,15 +70,18 @@ export default function Home() {
 
       <main
         style={{
-          height: "auto",
           width: "100%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent: "space-around",
         }}
       >
         <Header />
         <Body />
+        <Video />
+        <Ambassadors />
+        <Invest />
         <Explore />
         <footer>
           <Contatti />

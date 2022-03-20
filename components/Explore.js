@@ -14,146 +14,137 @@ const Explore = ({ children }) => {
   if (screenWindow !== "") {
     console.log(screenWindow)
     return (
-      <header
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: "100%",
-        }}
+      <div
+        style={
+          screenWindow.width < 768
+            ? {
+                display: "flex",
+                flexDirection: "column-reverse",
+                alignItems: "center",
+                justifyContent: "space-around",
+                paddingBlock: "5%",
+              }
+            : {
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+                paddingBlock: "5%",
+                paddingInline: "10%",
+              }
+        }
       >
         <div
           style={
             screenWindow.width < 768
               ? {
                   display: "flex",
-                  flexDirection: "column-reverse",
-                  alignItems: "center",
-                  justifyContent: "space-around",
-                  paddingBlock: "5%",
+                  flexDirection: "column",
+                  maxWidth: "80vw",
                 }
               : {
                   display: "flex",
-                  flexDirection: "row",
-                  alignItems: "flex-start",
-                  justifyContent: "space-between",
-                  paddingBlock: "5%",
-                  paddingInline: "10%",
+                  flexDirection: "column",
+                  maxWidth: "30vw",
                 }
           }
         >
-          <div
+          <p
             style={
               screenWindow.width < 768
                 ? {
-                    display: "flex",
-                    flexDirection: "column",
-                    maxWidth: "80vw",
+                    fontSize: "1.6em",
+                    padding: "0px",
+                    margin: "0px",
+                    textAlign: "left",
                   }
                 : {
-                    display: "flex",
-                    flexDirection: "column",
-                    maxWidth: "30vw",
+                    fontSize: "2em",
+                    padding: "0px",
+                    marginInline: "0px",
+                    textAlign: "left",
                   }
             }
           >
-            <p
-              style={
-                screenWindow.width < 768
-                  ? {
-                      fontSize: "1.6em",
-                      padding: "0px",
-                      margin: "0px",
-                      textAlign: "left",
-                    }
-                  : {
-                      fontSize: "2em",
-                      padding: "0px",
-                      marginInline: "0px",
-                      textAlign: "left",
-                    }
-              }
-            >
-              {`Esplora l'Italia.`}
-            </p>
-            <p
-              style={
-                screenWindow.width < 768
-                  ? {
-                      fontSize: "0.8em",
-                      padding: "0px",
-                      margin: "0px",
-                      textAlign: "left",
-                    }
-                  : {
-                      fontSize: "0.8em",
-                      padding: "0px",
-                      margin: "0px",
-                      textAlign: "left",
-                      paddingBlockEnd: "10px",
-                    }
-              }
-            >{`C'è un mondo da scoprire intorno a te.`}</p>
+            {`Esplora l'Italia`}
+          </p>
+          <p
+            style={
+              screenWindow.width < 768
+                ? {
+                    fontSize: "0.8em",
+                    padding: "0px",
+                    margin: "0px",
+                    textAlign: "left",
+                  }
+                : {
+                    fontSize: "0.8em",
+                    padding: "0px",
+                    margin: "0px",
+                    textAlign: "left",
+                    paddingBlockEnd: "10px",
+                  }
+            }
+          >{`C'è un mondo da scoprire intorno a te.`}</p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              marginBlockStart: "20px",
+            }}
+          >
             <div
               style={{
                 display: "flex",
-                flexDirection: "row",
-                marginBlockStart: "20px",
+                flexDirection: "column",
+                justifyContent: "space-around",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-around",
-                }}
-              >
-                <div>
-                  <Image
-                    src="https://i.ibb.co/m9svSwD/Pulsante-App-Store.png"
-                    alt="QR Code to travelin"
-                    width="263"
-                    height="78"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="https://i.ibb.co/m9svSwD/Pulsante-App-Store.png"
-                    alt="QR Code to travelin"
-                    width="263"
-                    height="78"
-                  />
-                </div>
-              </div>
-              <div style={{ paddingInline: "5px" }}>
+              <div>
                 <Image
-                  src="https://i.ibb.co/ncrKLFc/QRCODE.png"
+                  src="https://i.ibb.co/m9svSwD/Pulsante-App-Store.png"
                   alt="QR Code to travelin"
-                  width="163"
-                  height="157"
+                  width="263"
+                  height="78"
+                />
+              </div>
+              <div>
+                <Image
+                  src="https://i.ibb.co/m9svSwD/Pulsante-App-Store.png"
+                  alt="QR Code to travelin"
+                  width="263"
+                  height="78"
                 />
               </div>
             </div>
-          </div>
-          <div
-            style={
-              screenWindow.width < 768
-                ? { maxWidth: "70vw" }
-                : {
-                    maxWidth: "25vw",
-                    marginInlineStart: "40px",
-                  }
-            }
-          >
-            <Image
-              src="https://i.ibb.co/FJsBRXW/Illustrazione-app.png"
-              alt="mascotte travelin"
-              width="1154"
-              height="1177"
-            />
+            <div style={{ paddingInline: "5px" }}>
+              <Image
+                src="https://i.ibb.co/ncrKLFc/QRCODE.png"
+                alt="QR Code to travelin"
+                width="163"
+                height="157"
+              />
+            </div>
           </div>
         </div>
-      </header>
+        <div
+          style={
+            screenWindow.width < 768
+              ? { maxWidth: "70vw" }
+              : {
+                  maxWidth: "25vw",
+                  marginInlineStart: "40px",
+                }
+          }
+        >
+          <Image
+            src="https://i.ibb.co/FJsBRXW/Illustrazione-app.png"
+            alt="mascotte travelin"
+            width="1154"
+            height="1177"
+          />
+        </div>
+      </div>
     )
   } else {
     return <p>loading</p>

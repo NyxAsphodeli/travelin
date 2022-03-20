@@ -31,6 +31,7 @@ const Body = ({ children }) => {
                 width: "100%",
                 padding: "0px",
                 margin: "0px",
+                marginBlockEnd: "40px",
               }
             : {
                 display: "flex",
@@ -45,8 +46,6 @@ const Body = ({ children }) => {
           style={{
             fontSize: "2em",
             textAlign: "left",
-            paddingInline: "0px",
-            marginInline: "0px",
           }}
         >
           Come funziona Travelin?
@@ -85,30 +84,3 @@ const Body = ({ children }) => {
   }
 }
 export default Body
-
-/* 
-
-      <body
-        style={
-          screenWindow.width < 768
-            ? {
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                width: "100%",
-                padding: "0px",
-                margin: "0px",
-              }
-            : {
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                width: "100%",
-                paddingInline: "20%",
-              }
-        }
-      >
-      </body>
-
-
-*/
