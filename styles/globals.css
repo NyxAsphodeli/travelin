@@ -34,3 +34,6 @@ div {
   margin: 0px;
   padding: 0px;
 }
+footer {
+  min-width: 100%;
+}

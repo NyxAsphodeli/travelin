@@ -6,6 +6,8 @@ import background from "../public/background.png"
 import logoS from "../public/logo-s.png"
 import Logo from "../public/Logo.png"
 import Header from "../components/Header"
+import Body from "../components/Body"
+import Explore from "../components/Explore"
 
 /* 
 https://i.ibb.co/Jj9Q3tS/Marta.jpg
@@ -73,11 +75,12 @@ export default function Home() {
         }}
       >
         <Header />
+        <Body />
+        <Explore />
+        <footer>
+          <Contatti />
+        </footer>
       </main>
-
-      <footer>
-        <Contatti />
-      </footer>
     </>
   )
 }

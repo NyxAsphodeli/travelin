@@ -22,19 +22,19 @@ function Contatti() {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-around",
-          maxWidth: "50%",
+          justifyContent: "space-evenly",
+          maxWidth: "40%",
         }}
       >
         <div
           style={{
-            maxWidth: "80%",
+            maxWidth: "60%",
             marginInline: "auto",
           }}
         >
           <Image src={travelinlight} alt="logo travelin" />
         </div>
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
           <Image src={share} alt="share travelin" />
           <Image src={insta} alt="insta travelin" />
           <Image src={insta} alt="linkedin travelin" />
