@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import styles from "../styles/Home.module.css"
+import { useRouter } from "next/router"
+
 const Header = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
   useEffect(() => {
@@ -22,48 +24,6 @@ const Header = ({ children }) => {
           width: "100%",
         }}
       >
-        <div
-          className="navbar"
-          style={
-            screenWindow.width < 768
-              ? {
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                  width: "100%",
-                  height: "60px",
-                  padding: "0px",
-                  margin: "0px",
-                  background: "rgb(255, 255, 255)",
-                  background:
-                    " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
-                }
-              : {
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                  width: "100%",
-                  height: "60px",
-                  padding: "0px",
-                  margin: "0px",
-                  background: "rgb(255, 255, 255)",
-                  background:
-                    " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
-                  paddingInline: "20%",
-                }
-          }
-        >
-          <Image
-            src="https://i.ibb.co/Qvymb0T/logo-s.png"
-            alt="Home"
-            width="90px"
-            height="18px"
-          />
-
-          <div>Chi siamo</div>
-        </div>
         <div
           className={styles.vetrina}
           style={

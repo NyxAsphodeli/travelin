@@ -1,13 +1,12 @@
 import Head from "next/head"
 import Contatti from "./contatti"
 import Header from "../components/Header"
-import Body from "../components/Body"
-import Explore from "../components/Explore"
-import Invest from "../components/Invest"
-import Ambassadors from "../components/Ambassadors"
-import Video from "../components/Video"
+import Image from "next/image"
+import { useRouter } from "next/router"
+
 import Partners from "../components/Partners"
 import Navbar from "../components/Navbar"
+import ChiSiamo from "../components/ChiSiamo"
 
 /* 
 https://i.ibb.co/Jj9Q3tS/Marta.jpg
@@ -50,7 +49,7 @@ https://i.ibb.co/Tvbx2zn/bgimg-travelin-drawio.png
 https://i.ibb.co/xhgcg1v/mock-up-travelin-ritaglio.png
 https://i.ibb.co/ncrKLFc/QRCODE.png
 */
-export default function Home() {
+export default function Team() {
   return (
     <>
       <Head>
@@ -74,14 +73,10 @@ export default function Home() {
           justifyContent: "space-around",
         }}
       >
-        <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
-        <Header />
-        <Body />
-        <Video />
-        <Ambassadors />
-        <Partners title={`Si fidano di noi`} />
-        <Invest />
-        <Explore />
+        <Navbar href={"/"} text={"Home"} />
+        <ChiSiamo />
+        <Partners title={"Partners"} />
+
         <footer>
           <Contatti />
         </footer>
