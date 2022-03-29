@@ -8,7 +8,7 @@ import Ambassadors from "../components/Ambassadors"
 import Video from "../components/Video"
 import Partners from "../components/Partners"
 import Navbar from "../components/Navbar"
-
+import Image from "next/image"
 /* 
 https://i.ibb.co/Jj9Q3tS/Marta.jpg
 https://i.ibb.co/CPYzNpm/menu.png
@@ -51,41 +51,75 @@ https://i.ibb.co/xhgcg1v/mock-up-travelin-ritaglio.png
 https://i.ibb.co/ncrKLFc/QRCODE.png
 */
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Travelin</title>
-        <link rel="icon" href="https://i.ibb.co/Qvymb0T/logo-s.png" />
-        <meta
-          name="description"
-          property="og:description"
-          content={`Travelin official website`}
-        />
-        <meta property="og:image" content="../public/Logo.png" />
-        <meta name="og:title" content="Travelin" />
-      </Head>
+  let wip = true
+  if (!wip) {
+    return (
+      <>
+        <Head>
+          <title>Travelin</title>
+          <link rel="icon" href="https://i.ibb.co/Qvymb0T/logo-s.png" />
+          <meta
+            name="description"
+            property="og:description"
+            content={`Travelin official website`}
+          />
+          <meta property="og:image" content="../public/Logo.png" />
+          <meta name="og:title" content="Travelin" />
+        </Head>
 
-      <main
+        <main
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "space-around",
+            /*  position: "fixed",
+            top: "0px",
+            left: "0px", */
+          }}
+        >
+          <div
+            id="workInProgress"
+            style={{
+              position: "fixed",
+              top: "0px",
+              left: "0px",
+              minWidth: "100vw",
+              minHeight: "100vh",
+              filter: "blur(4px)",
+              zIndex: "0",
+            }}
+          >
+            <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
+            <Header />
+            <Body />
+            <Video />
+            <Ambassadors />
+            <Partners title={`Si fidano di noi`} />
+            <Invest />
+            <Explore />
+            <footer>
+              <Contatti />
+            </footer>{" "}
+          </div>
+        </main>
+      </>
+    )
+  } else {
+    return (
+      <div
         style={{
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-around",
+          paddingBlockStart: "100px",
         }}
       >
-        <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
-        <Header />
-        <Body />
-        <Video />
-        <Ambassadors />
-        <Partners title={`Si fidano di noi`} />
-        <Invest />
-        <Explore />
-        <footer>
-          <Contatti />
-        </footer>
-      </main>
-    </>
-  )
+        <Image
+          src="https://i.ibb.co/ZTW9ZTy/wip.jpg"
+          alt="Work in progress"
+          width="1600px"
+          height="1039px"
+        />
+      </div>
+    )
+  }
 }
