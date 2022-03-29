@@ -120,6 +120,7 @@ const Body = ({ children }) => {
                   flexDirection: "column-reverse",
                   marginInline: "0px",
                   textAlign: "left",
+                  marginInline: "5%",
                 }
               : {
                   display: "flex",
@@ -205,6 +206,7 @@ const Body = ({ children }) => {
                     flexDirection: "column",
                     marginInline: "0px",
                     textAlign: "left",
+                    paddingInline: "20%",
                   }
                 : {
                     display: "flex",
@@ -233,6 +235,7 @@ const Body = ({ children }) => {
                   flexDirection: "column",
                   marginInline: "0px",
                   textAlign: "left",
+                  marginInline: "5%",
                 }
               : {
                   display: "flex",
@@ -253,6 +256,7 @@ const Body = ({ children }) => {
                     flexDirection: "column",
                     marginInline: "0px",
                     textAlign: "left",
+                    paddingInline: "20%",
                   }
                 : {
                     display: "flex",

@@ -20,7 +20,7 @@ const Invest = ({ children }) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          width: "100%",
+          width: "100vw",
           backgroundColor: "#e4f9f6",
           marginBlock: "0px",
         }}

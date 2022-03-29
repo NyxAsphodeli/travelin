@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react"
-import Image from "next/image"
-import { useRouter } from "next/router"
 
-const ChiSiamo = ({ href, text }) => {
-  const router = useRouter()
-  const handleClick = (e) => {
-    e.preventDefault()
-    router.push(href)
-  }
+const CTA = () => {
   const [screenWindow, setScreenWindow] = useState("")
   useEffect(() => {
     typeof document !== undefined
@@ -58,7 +51,6 @@ const ChiSiamo = ({ href, text }) => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
-                  width: "100%",
                   textAlign: "left",
                   paddingInlineStart: "0px",
                 }
@@ -68,33 +60,14 @@ const ChiSiamo = ({ href, text }) => {
             style={
               screenWindow.width < 768
                 ? {
-                    fontSize: "1.6em",
+                    fontSize: "0.6em",
                     marginInline: "0px",
                     textAlign: "left",
                   }
                 : {
-                    fontSize: "2em",
+                    fontSize: "1em",
                     padding: "0px",
 
-                    textAlign: "left",
-                    marginBlock: "20px",
-                    marginInline: "0px",
-                  }
-            }
-          >
-            <b> {`Il nostro team`}</b>
-          </p>
-          <p
-            style={
-              screenWindow.width < 768
-                ? {
-                    fontSize: "1rem",
-                    marginInline: "0px",
-                    textAlign: "left",
-                  }
-                : {
-                    fontSize: "1.2rem",
-                    padding: "0px",
                     textAlign: "left",
                     marginBlock: "20px",
                     marginInline: "0px",
@@ -102,9 +75,11 @@ const ChiSiamo = ({ href, text }) => {
                   }
             }
           >
-            {`Siamo un team giovane e dimanico, proveniente da tutta Italia. `}
-            <b>{`Innovatori nel cuore, `}</b>
-            {`vogliamo che tutti si accorgano della bellezza della nostra terra. `}
+            {`Ti piacerebbe collaborare con noi? `}
+            <u>
+              <b> {`Contattaci`}</b>
+            </u>
+            {` e facciamoci due chiacchiere.`}
           </p>
         </div>
       </div>
@@ -113,4 +88,4 @@ const ChiSiamo = ({ href, text }) => {
     return <div>loading</div>
   }
 }
-export default ChiSiamo
+export default CTA

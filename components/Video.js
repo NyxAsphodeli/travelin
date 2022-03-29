@@ -15,44 +15,72 @@ const Video = ({ children }) => {
     console.log(screenWindow)
     return (
       <div
-        /*       className="col-12 offset-0 col-10 offset-2 "
-         */ /* className="col-12 offset-0 col-md-6" */
-        style={
-          screenWindow.width < "768"
-            ? {
-                padding: "0px",
-                marginInline: "30%",
-                width: "100vw",
-                height: "auto",
-                backgroundColor: "#e4f9f6",
-              }
-            : {
-                padding: "0px",
-                width: "80vw",
-
-                marginBlockStart: "40px",
-                backgroundColor: "#e4f9f6",
-              }
-        }
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          minWidth: "100vw",
+          backgroundColor: "#e4f9f6",
+        }}
       >
-        {screenWindow.width < "768" ? (
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-            controls={true}
-            width={"64%"}
-            height={"36%"}
-            alt={"our journey"}
-            style={{ marginInline: "auto" }}
-          />
-        ) : (
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-            controls={true}
-            width={"640px"}
-            height={"360px"}
-            alt={"our journey"}
-          />
-        )}
+        <div
+          style={
+            screenWindow.width < 768
+              ? {
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-around",
+                  paddingBlock: "5%",
+                }
+              : {
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-around",
+                  width: "100vw",
+                  paddingInline: "20vw",
+                }
+          }
+        >
+          <div
+            style={
+              screenWindow.width < "768"
+                ? {
+                    padding: "0px",
+                    width: "100vw",
+                    height: "auto",
+                    backgroundColor: "#e4f9f6",
+                  }
+                : {
+                    padding: "0px",
+                    width: "80vw",
+                    height: "auto",
+
+                    backgroundColor: "#e4f9f6",
+                  }
+            }
+          >
+            {screenWindow.width < "768" ? (
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                controls={true}
+                width={"63%"}
+                height={"auto"}
+                alt={"our journey"}
+                style={{ marginInline: "auto" }}
+              />
+            ) : (
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                controls={true}
+                width={"640px"}
+                height={"360px"}
+                alt={"our journey"}
+              />
+            )}
+          </div>
+        </div>
       </div>
     )
   } else {

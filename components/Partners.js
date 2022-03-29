@@ -36,7 +36,7 @@ const Partners = ({ title }) => {
           style={
             screenWindow.width < 768
               ? {
-                  fontSize: "1.2em",
+                  fontSize: "1.6em",
                   marginInline: "0px",
                   textAlign: "left",
                 }
@@ -61,6 +61,8 @@ const Partners = ({ title }) => {
                   flexDirection: "row",
                   flexWrap: "wrap",
                   justifyContent: "center",
+                  marginBlockEnd: "2em",
+                  alignItems: "center",
                 }
               : {
                   height: "auto",
@@ -71,6 +73,7 @@ const Partners = ({ title }) => {
                   flexDirection: "row",
                   alignItems: "center",
                   justifyContent: "space-around",
+                  marginBlockEnd: "2em",
                 }
           }
         >

@@ -8,6 +8,60 @@ const Navbar = ({ href, text }) => {
     e.preventDefault()
     router.push(href)
   }
+  const styleChoice = () => {
+    if (text === "Home" && screenWindow.width < 768) {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+        width: "100%",
+        height: "60px",
+        padding: "0px",
+        margin: "0px",
+      }
+    } else if (text === "Home" && screenWindow.width >= 768) {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+        width: "100%",
+        height: "60px",
+        padding: "0px",
+        margin: "0px",
+      }
+    } else if (text !== "Home" && screenWindow.width < 768) {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+        width: "100%",
+        height: "60px",
+        padding: "0px",
+        margin: "0px",
+        background: "rgb(255, 255, 255)",
+        background:
+          " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
+      }
+    } else {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+        width: "100vw",
+        height: "60px",
+        padding: "0px",
+        margin: "0px",
+        background: "rgb(255, 255, 255)",
+        background:
+          " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
+        paddingInline: "20%",
+      }
+    }
+  }
   const [screenWindow, setScreenWindow] = useState("")
   useEffect(() => {
     typeof document !== undefined
@@ -19,7 +73,8 @@ const Navbar = ({ href, text }) => {
   }, [])
   if (screenWindow !== "") {
     return (
-      <navbar
+      <div
+        className="Navbar"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -27,39 +82,7 @@ const Navbar = ({ href, text }) => {
           width: "100%",
         }}
       >
-        <div
-          className="navbar"
-          style={
-            screenWindow.width < 768
-              ? {
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                  width: "100%",
-                  height: "60px",
-                  padding: "0px",
-                  margin: "0px",
-                  background: "rgb(255, 255, 255)",
-                  background:
-                    " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
-                }
-              : {
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                  width: "100%",
-                  height: "60px",
-                  padding: "0px",
-                  margin: "0px",
-                  background: "rgb(255, 255, 255)",
-                  background:
-                    " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
-                  paddingInline: "20%",
-                }
-          }
-        >
+        <div className="navbar" style={styleChoice()}>
           <Image
             src="https://i.ibb.co/Qvymb0T/logo-s.png"
             alt="Logo AWorld"
@@ -70,7 +93,7 @@ const Navbar = ({ href, text }) => {
             <div>{text}</div>{" "}
           </a>
         </div>
-      </navbar>
+      </div>
     )
   } else {
     return <div>loading</div>

@@ -41,7 +41,8 @@ const Header = ({ children }) => {
                   alignItems: "center",
                   justifyContent: "space-around",
                   paddingBlock: "5%",
-                  paddingInline: "10%",
+                  width: "100vw",
+                  paddingInline: "20vw",
                 }
           }
         >
@@ -133,6 +134,8 @@ const Header = ({ children }) => {
             backgroundColor: "#004267",
             paddingBlockStart: "1rem",
             marginBlockStart: "-8px",
+            width: "100vw",
+            paddingInline: "10vw",
           }}
         >
           <p
