@@ -4,8 +4,8 @@ import Header from "../components/Header"
 import Body from "../components/Body"
 import Explore from "../components/Explore"
 import Invest from "../components/Invest"
-import Ambassadors from "../components/Ambassadors"
-import Video from "../components/Video"
+/* import Ambassadors from "../components/Ambassadors"
+import Video from "../components/Video" */
 import Partners from "../components/Partners"
 import Navbar from "../components/Navbar"
 import Image from "next/image"
@@ -51,7 +51,7 @@ https://i.ibb.co/xhgcg1v/mock-up-travelin-ritaglio.png
 https://i.ibb.co/ncrKLFc/QRCODE.png
 */
 export default function Home() {
-  let wip = true
+  let wip = false
   if (!wip) {
     return (
       <>
@@ -74,12 +74,12 @@ export default function Home() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "space-around",
-            /*  position: "fixed",
+            position: "relative",
             top: "0px",
-            left: "0px", */
+            left: "0px",
           }}
         >
-          <div
+          {/* <div
             id="workInProgress"
             style={{
               position: "fixed",
@@ -90,19 +90,19 @@ export default function Home() {
               filter: "blur(4px)",
               zIndex: "0",
             }}
-          >
-            <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
-            <Header />
-            <Body />
-            <Video />
-            <Ambassadors />
-            <Partners title={`Si fidano di noi`} />
-            <Invest />
-            <Explore />
-            <footer>
-              <Contatti />
-            </footer>{" "}
-          </div>
+          > */}
+          <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
+          <Header />
+          <Body />
+          {/* <Video />
+            <Ambassadors /> */}
+          <Partners title={`Si fidano di noi`} />
+          <Invest />
+          <Explore />
+          <footer>
+            <Contatti />
+          </footer>{" "}
+          {/*   </div> */}
         </main>
       </>
     )

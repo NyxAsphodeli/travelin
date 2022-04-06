@@ -106,7 +106,7 @@ const Invest = ({ children }) => {
               {`Investi nella `}
               <b>{`1° app di turismo 100% accessibile.`}</b>
             </p>
-            <div
+            {/* <div
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -147,7 +147,7 @@ const Invest = ({ children }) => {
                   height="157"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
           <div
             style={

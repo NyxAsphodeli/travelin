@@ -4,8 +4,7 @@ import { useRouter } from "next/router"
 
 const Navbar = ({ href, text }) => {
   const router = useRouter()
-  const handleClick = (e) => {
-    e.preventDefault()
+  const handleClick = () => {
     router.push(href)
   }
   const styleChoice = () => {

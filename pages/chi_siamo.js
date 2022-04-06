@@ -1,8 +1,7 @@
 import Head from "next/head"
 import Contatti from "./contatti"
-import Header from "../components/Header"
+/* import Header from "../components/Header" */
 import Image from "next/image"
-import { useRouter } from "next/router"
 import Link from "next/link"
 
 import Partners from "../components/Partners"
@@ -53,20 +52,90 @@ https://i.ibb.co/xhgcg1v/mock-up-travelin-ritaglio.png
 https://i.ibb.co/ncrKLFc/QRCODE.png
 */
 export default function Team() {
-  return (
-    <>
-      <Head>
-        <title>Travelin</title>
-        <link rel="icon" href="https://i.ibb.co/Qvymb0T/logo-s.png" />
-        <meta
-          name="description"
-          property="og:description"
-          content={`Travelin official website`}
-        />
-        <meta property="og:image" content="../public/Logo.png" />
-        <meta name="og:title" content="Travelin" />
-      </Head>
+  let wip = true
+  if (!wip) {
+    return (
+      <>
+        <Head>
+          <title>Travelin</title>
+          <link rel="icon" href="https://i.ibb.co/Qvymb0T/logo-s.png" />
+          <meta
+            name="description"
+            property="og:description"
+            content={`Travelin official website`}
+          />
+          <meta property="og:image" content="../public/Logo.png" />
+          <meta name="og:title" content="Travelin" />
+        </Head>
 
+        <main
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "space-around",
+          }}
+        >
+          <Navbar href={"/"} text={"Indietro"} />
+          <ChiSiamo />
+
+          <div className={carousel.slider}>
+            <Link href="#slide-1" scroll={false}>
+              <a>1</a>
+            </Link>
+            <Link href="#slide-2" scroll={false}>
+              <a>2</a>
+            </Link>
+            <Link href="#slide-3" scroll={false}>
+              <a>3</a>
+            </Link>
+            <Link href="#slide-4" scroll={false}>
+              <a>4</a>
+            </Link>
+            <Link href="#slide-5" scroll={false}>
+              <a>5</a>
+            </Link>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                width: "100vw",
+                backgroundColor: "#e4f9f6",
+                marginBlock: "0px",
+              }}
+            >
+              <div className={carousel.slides}>
+                <div
+                  name="slide-1"
+                  id="slide-1"
+                  style={{ paddingInlineStart: "50vw" }}
+                >
+                  1
+                </div>
+                <div name="slide-2" id="slide-2">
+                  2
+                </div>
+                <div id="slide-3">3</div>
+                <div id="slide-4">4</div>
+                <div id="slide-5" style={{ marginInlineEnd: "100%" }}>
+                  5
+                </div>
+              </div>
+            </div>
+          </div>
+          <CTA />
+          <Partners title={"Partners"} />
+
+          <footer>
+            <Contatti />
+          </footer>
+        </main>
+      </>
+    )
+  } else {
+    return (
       <main
         style={{
           width: "100%",
@@ -76,61 +145,21 @@ export default function Team() {
           justifyContent: "space-around",
         }}
       >
-        <Navbar href={"/"} text={"Home"} />
-        <ChiSiamo />
-
-        <div className={carousel.slider}>
-          <Link href="#slide-1" scroll={false}>
-            <a>1</a>
-          </Link>
-          <Link href="#slide-2" scroll={false}>
-            <a>2</a>
-          </Link>
-          <Link href="#slide-3" scroll={false}>
-            <a>3</a>
-          </Link>
-          <Link href="#slide-4" scroll={false}>
-            <a>4</a>
-          </Link>
-          <Link href="#slide-5" scroll={false}>
-            <a>5</a>
-          </Link>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              width: "100vw",
-              backgroundColor: "#e4f9f6",
-              marginBlock: "0px",
-            }}
-          >
-            <div className={carousel.slides}>
-              <div
-                name="slide-1"
-                id="slide-1"
-                style={{ paddingInlineStart: "50vw" }}
-              >
-                1
-              </div>
-              <div name="slide-2" id="slide-2">
-                2
-              </div>
-              <div id="slide-3">3</div>
-              <div id="slide-4">4</div>
-              <div id="slide-5" style={{ marginInlineEnd: "100%" }}>
-                5
-              </div>
-            </div>
-          </div>
+        <Navbar href={"/"} text={"Indietro"} />
+        <div
+          style={{
+            paddingBlockStart: "100px",
+            paddingInline: "15px",
+          }}
+        >
+          <Image
+            src="https://i.ibb.co/ZTW9ZTy/wip.jpg"
+            alt="Work in progress"
+            width="1600px"
+            height="1039px"
+          />
         </div>
-        <CTA />
-        <Partners title={"Partners"} />
-
-        <footer>
-          <Contatti />
-        </footer>
       </main>
-    </>
-  )
+    )
+  }
 }
