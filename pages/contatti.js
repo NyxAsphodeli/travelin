@@ -48,17 +48,19 @@ function Contatti() {
           justifyContent: "space-evenly",
         }}
       >
-        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+        {/* <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
           Chi siamo
-        </p>
+        </p> */}
         <a href="tel:331 848 2994">
           <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
             Investi
           </p>
         </a>
-        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
-          Contattaci
-        </p>
+        <a href="mailto:martagrelli1997@gmail.com">
+          <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+            Contattaci
+          </p>
+        </a>
       </div>
       <div
         className="contatti"

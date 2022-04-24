@@ -88,9 +88,9 @@ const Navbar = ({ href, text }) => {
             width="90px"
             height="18px"
           />
-          <a href={href} onClick={handleClick}>
+          {/* <a href={href} onClick={handleClick}>
             <div>{text}</div>{" "}
-          </a>
+          </a> */}
         </div>
       </div>
     )
