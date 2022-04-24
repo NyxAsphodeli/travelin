@@ -59,7 +59,7 @@ const Explore = ({ children }) => {
                     textAlign: "left",
                   }
                 : {
-                    fontSize: "2em",
+                    fontSize: "2.6em",
                     padding: "0px",
                     marginInline: "0px",
                     textAlign: "left",
@@ -78,7 +78,7 @@ const Explore = ({ children }) => {
                     textAlign: "left",
                   }
                 : {
-                    fontSize: "0.8em",
+                    fontSize: "1.8em",
                     padding: "0px",
                     margin: "0px",
                     textAlign: "left",
@@ -86,7 +86,7 @@ const Explore = ({ children }) => {
                   }
             }
           >{`C'è un mondo da scoprire intorno a te.`}</p>
-          <div
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "row",
@@ -125,7 +125,7 @@ const Explore = ({ children }) => {
                 height="157"
               />
             </div>
-          </div>
+          </div> */}
         </div>
         <div
           style={

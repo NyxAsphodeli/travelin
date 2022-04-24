@@ -70,7 +70,7 @@ const Header = ({ children }) => {
                       marginInline: "0px",
                     }
                   : {
-                      fontSize: "1.6em",
+                      fontSize: "2.6em",
                       paddingInline: "16px",
                       marginInline: "0px",
                     }
@@ -78,7 +78,7 @@ const Header = ({ children }) => {
             >
               {`C'è un mondo da scoprire intorno a te.`}{" "}
             </p>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            {/* <div style={{ display: "flex", flexDirection: "row" }}>
               <div
                 style={{
                   display: "flex",
@@ -111,7 +111,7 @@ const Header = ({ children }) => {
                   height="157"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
           <div
             style={

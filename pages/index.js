@@ -57,7 +57,7 @@ export default function Home() {
       <>
         <Head>
           <title>Travelin</title>
-          <link rel="icon" href="https://i.ibb.co/Qvymb0T/logo-s.png" />
+          <link rel="icon" href="https://i.ibb.co/Cb640PJ/Logo-White-Bg.png" />
           <meta
             name="description"
             property="og:description"

@@ -37,7 +37,7 @@ function Contatti() {
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
           <Image src={share} alt="share travelin" />
           <Image src={insta} alt="insta travelin" />
-          <Image src={insta} alt="linkedin travelin" />
+          {/* <Image src={insta} alt="linkedin travelin" /> */}
         </div>
       </div>
       <div
@@ -51,9 +51,11 @@ function Contatti() {
         <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
           Chi siamo
         </p>
-        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
-          Investi
-        </p>
+        <a href="tel:331 848 2994">
+          <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+            Investi
+          </p>
+        </a>
         <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
           Contattaci
         </p>
@@ -66,15 +68,15 @@ function Contatti() {
           justifyContent: "space-evenly",
         }}
       >
-        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+        {/* <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
           {`Scarica l'app`}
-        </p>
-        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+        </p> */}
+        {/* <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
           Privacy Policy
-        </p>
-        <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
+        </p> */}
+        {/*  <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
           Cookies
-        </p>
+        </p> */}
       </div>
     </div>
   )
