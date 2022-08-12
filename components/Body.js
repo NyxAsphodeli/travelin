@@ -331,13 +331,15 @@ const Body = ({ children }) => {
                     }
               }
             >
-              {`La vita quotidiana è progettata per le persone comuni. Esistono però  `}
-              <b>{`individua extra-ordinari `}</b>
-              {`che ci permettono di `}
-              <b>{`andare oltre `}</b>
-              {`i limiti della nostra realtà`}
+              {`L'`}
+              <b>{`accessibilità `}</b>
+              {`è la  `}
+              <b>{`chiave `}</b>
+              {`per permettere alle personedi vivere avventure `}
+              <b>{`con i propri tempi e spazi, `}</b>
+              {`tenendo in condiderazione i loro sogni e bisogni `}
               <br></br>
-              <b>{`Progettiamo tenendo in considerazione i bisogni di tutte le persone`}</b>
+              <b>{`Progettiamo con occhio attento e mente aperta`}</b>
             </p>
           </div>
         </div>

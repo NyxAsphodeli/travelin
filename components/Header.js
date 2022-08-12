@@ -140,7 +140,7 @@ const Header = ({ children }) => {
         >
           <p
             className={styles.white}
-          >{`Esplora la bellezza dell'Italia attraverso itinerari ed esperienze uniche. Immergiti in ciò che ti circonda, crea itinerari e guarda quelli di guide turistiche e altri utenti.`}</p>
+          >{`Esplora la bellezza dell’Italia attraverso itinerari ed esperienze uniche. Immergiti in ciò che ti circonda, crea itinerari e guarda quelli di guide turistiche e altri utenti.`}</p>
         </div>
       </header>
     )
