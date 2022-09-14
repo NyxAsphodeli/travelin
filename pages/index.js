@@ -79,18 +79,6 @@ export default function Home() {
             left: "0px",
           }}
         >
-          {/* <div
-            id="workInProgress"
-            style={{
-              position: "fixed",
-              top: "0px",
-              left: "0px",
-              minWidth: "100vw",
-              minHeight: "100vh",
-              filter: "blur(4px)",
-              zIndex: "0",
-            }}
-          > */}
           <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
           <Header />
           <Body />

@@ -1,6 +1,15 @@
+// react js
 import React, { useEffect, useState } from "react"
-import Image from "next/image"
+
+// next js
 import { useRouter } from "next/router"
+import Image from "next/image"
+
+// images
+import sandwich from "../public/menu.png"
+
+// styles
+import styles from "../styles/Home.module.css"
 
 const Navbar = ({ href, text }) => {
   const router = useRouter()
@@ -16,8 +25,6 @@ const Navbar = ({ href, text }) => {
         alignItems: "center",
         width: "100%",
         height: "60px",
-        padding: "0px",
-        margin: "0px",
       }
     } else if (text === "Home" && screenWindow.width >= 768) {
       return {
@@ -27,8 +34,6 @@ const Navbar = ({ href, text }) => {
         alignItems: "center",
         width: "100%",
         height: "60px",
-        padding: "0px",
-        margin: "0px",
       }
     } else if (text !== "Home" && screenWindow.width < 768) {
       return {
@@ -38,11 +43,6 @@ const Navbar = ({ href, text }) => {
         alignItems: "center",
         width: "100%",
         height: "60px",
-        padding: "0px",
-        margin: "0px",
-        background: "rgb(255, 255, 255)",
-        background:
-          " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
       }
     } else {
       return {
@@ -54,9 +54,6 @@ const Navbar = ({ href, text }) => {
         height: "60px",
         padding: "0px",
         margin: "0px",
-        background: "rgb(255, 255, 255)",
-        background:
-          " linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(228,249,246,1) 100%)",
         paddingInline: "20%",
       }
     }
@@ -79,18 +76,27 @@ const Navbar = ({ href, text }) => {
           flexDirection: "column",
           alignItems: "center",
           width: "100%",
+          paddingBlockStart: "1rem",
         }}
       >
-        <div className="navbar" style={styleChoice()}>
+        <div className={"navbar " + styles.nakedElement} style={styleChoice()}>
           <Image
             src="https://i.ibb.co/Qvymb0T/logo-s.png"
             alt="Logo AWorld"
-            width="90px"
-            height="18px"
+            width="100px"
+            height="19px"
           />
-          {/* <a href={href} onClick={handleClick}>
-            <div>{text}</div>{" "}
-          </a> */}
+          <button
+            className={styles.nakedElement}
+            style={{ backgroundColor: "#ffffff" }}
+          >
+            <Image
+              src={sandwich}
+              alt="sandwich menu"
+              width={32.5}
+              height={20}
+            />
+          </button>
         </div>
       </div>
     )
