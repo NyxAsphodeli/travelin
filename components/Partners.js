@@ -3,6 +3,15 @@ import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import MainButton from "./buttons/MainButton"
 
+/* 
+
+https://i.ibb.co/k6C5LLx/federagit-color.png
+https://i.ibb.co/LhkM9hc/pi-culturaaccessibile-color.png
+https://i.ibb.co/hmH76W7/aprionlus-color.png
+https://i.ibb.co/DWBF8Ng/willeasy-color.png
+https://i.ibb.co/5cMpG4n/isitt-color.png
+
+*/
 const Partners = ({ title }) => {
   const [screenWindow, setScreenWindow] = useState("")
   useEffect(() => {
@@ -116,40 +125,50 @@ const Partners = ({ title }) => {
             style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
           >
             <Image
-              src="https://i.ibb.co/J5ZfKd1/CULTURAACCESSIBILE.png"
-              alt="Più cultura accessibile"
-              width="160px"
-              height="80px"
-            />
-          </div>
-          <div
-            style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
-          >
-            <Image
-              src="https://i.ibb.co/DbzrBcL/TURISMABILE-400x70.png"
-              alt="Turismabile"
-              width="160px"
-              height="80px"
-            />
-          </div>
-          <div
-            style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
-          >
-            <Image
-              src="https://i.ibb.co/h1dQkT1/APRIONLUS-2.jpg"
-              alt="Aprionlus"
-              width="80px"
-              height="80px"
-            />
-          </div>
-          <div
-            style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
-          >
-            <Image
-              src="https://i.ibb.co/gFHtc7P/FEDERAGIT2.png"
+              src="https://i.ibb.co/k6C5LLx/federagit-color.png"
               alt="Federagit"
-              width="100px"
-              height="80px"
+              width="248px"
+              height="168px"
+            />
+          </div>
+          <div
+            style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
+          >
+            <Image
+              src="https://i.ibb.co/LhkM9hc/pi-culturaaccessibile-color.png"
+              alt="Più cultura accessibile"
+              width="357px"
+              height="167px"
+            />
+          </div>
+          <div
+            style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
+          >
+            <Image
+              src="https://i.ibb.co/hmH76W7/aprionlus-color.png"
+              alt="Aprionlus"
+              width="317px"
+              height="319px"
+            />
+          </div>
+          <div
+            style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
+          >
+            <Image
+              src="https://i.ibb.co/DWBF8Ng/willeasy-color.png"
+              alt="willEASY"
+              width="388px"
+              height="115px"
+            />
+          </div>
+          <div
+            style={{ minHeight: "40px", width: "100px", marginInline: "5px" }}
+          >
+            <Image
+              src="https://i.ibb.co/5cMpG4n/isitt-color.png"
+              alt="isiTT"
+              width="213px"
+              height="215px"
             />
           </div>
         </div>
