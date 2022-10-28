@@ -34,7 +34,7 @@ const Body = ({ children }) => {
                 width: "100%",
                 padding: "0px",
                 margin: "0px",
-                marginBlockEnd: "40px",
+                marginBlockEnd: "20px",
               }
             : {
                 display: "flex",
@@ -47,13 +47,10 @@ const Body = ({ children }) => {
         }
       >
         <p
+          className={styles.nakedElement + " " + styles.howTitle}
           style={
             screenWindow.width < 768
-              ? {
-                  fontSize: "1.6em",
-                  marginInline: "0px",
-                  textAlign: "left",
-                }
+              ? null
               : {
                   fontSize: "2em",
                   padding: "0px",
@@ -81,11 +78,13 @@ const Body = ({ children }) => {
             text={`Prova gli itinerari creati dagli altri utenti, creane di tuoi e condividili.`}
             image={`https://i.ibb.co/VVRkB7G/Scopri-576-862.png`}
           />
+          <div className={styles.gap20} />
           <HowToCard
             title={"Immergiti"}
             text={`Voci e testi ti guideranno. Immergiti nel racconto dei vari luoghi.`}
             image={`https://i.ibb.co/FVNfSbn/Immergiti-576-862.png`}
           />
+          <div className={styles.gap20} />
           <HowToCard
             title={"Esplora"}
             text={`Colleziona esperienze uniche. Esplora angoli nascosti e caratteristici.`}
@@ -93,13 +92,10 @@ const Body = ({ children }) => {
           />
         </div>
         <p
+          className={styles.nakedElement + " " + styles.howTitle}
           style={
             screenWindow.width < 768
-              ? {
-                  fontSize: "2rem",
-                  marginInline: "0px",
-                  textAlign: "left",
-                }
+              ? null
               : {
                   fontSize: "2.4rem",
                   padding: "0px",

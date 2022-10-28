@@ -83,8 +83,8 @@ const Navbar = ({ href, text }) => {
           <Image
             src="https://i.ibb.co/Qvymb0T/logo-s.png"
             alt="Logo AWorld"
-            width="100px"
-            height="19px"
+            width="133px"
+            height="30px"
           />
           <button
             className={styles.nakedElement}
@@ -93,8 +93,8 @@ const Navbar = ({ href, text }) => {
             <Image
               src={sandwich}
               alt="sandwich menu"
-              width={32.5}
-              height={20}
+              width={48.75}
+              height={30}
             />
           </button>
         </div>

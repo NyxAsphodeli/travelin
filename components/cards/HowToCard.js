@@ -20,7 +20,6 @@ const HowToCard = ({ title, text, image }) => {
                 height: "auto",
                 backgroundColor: "white",
                 borderWidth: "0px",
-                marginBlock: "10px",
               }
             : {
                 width: "20vw",
@@ -38,24 +37,37 @@ const HowToCard = ({ title, text, image }) => {
             screenWindow.width < 768
               ? {
                   borderRadius: "10px",
-                  height: "auto",
+                  height: "156px",
                   width: "80vw",
+                  objectFit: "cover",
                 }
               : {
                   borderRadius: "10px",
                   height: "auto",
                   width: "100%",
+                  objectFit: "unset",
                 }
           }
         />
         <Card.Body style={{ padding: "0px", marginInline: "0px" }}>
-          <Card.Title style={{ paddingBlockStart: "5px" }}>{title}</Card.Title>
+          <Card.Title
+            style={{
+              paddingBlockStart: "8px",
+              paddingBlockEnd: "4px",
+              fontSize: "24px",
+              fontWeight: "700",
+            }}
+          >
+            {title}
+          </Card.Title>
           <Card.Text
             style={{
               textAlign: "left",
               marginInline: "0px",
               paddingBlock: "0px",
-              fontSize: "0.8rem",
+              fontSize: "18px",
+              fontWeight: "400",
+              lineHeight: "22px",
             }}
           >
             {text}

@@ -33,3 +33,19 @@
 .pMobile {
   font-size: 24px;
 }
+
+.gap20 {
+  margin: 20px;
+}
+
+.weight500 {
+  font-weight: 500;
+}
+
+.howTitle {
+  font-size: 34px;
+  margin-inline: 0px;
+  text-align: center;
+  margin-block: 40px 30px;
+  line-height: 1.2;
+}

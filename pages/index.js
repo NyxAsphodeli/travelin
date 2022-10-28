@@ -9,6 +9,7 @@ import Video from "../components/Video" */
 import Partners from "../components/Partners"
 import Navbar from "../components/Navbar"
 import Image from "next/image"
+import Partecipa from "../components/Partecipa"
 /* 
 https://i.ibb.co/Jj9Q3tS/Marta.jpg
 https://i.ibb.co/CPYzNpm/menu.png
@@ -85,8 +86,9 @@ export default function Home() {
           {/* <Video />
             <Ambassadors /> */}
           <Partners title={`Si fidano di noi`} />
-          <Invest />
-          <Explore />
+          <Partecipa />
+          {/* <Invest /> */}
+          {/* <Explore /> */}
           <footer>
             <Contatti />
           </footer>{" "}
