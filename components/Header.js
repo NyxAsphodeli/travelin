@@ -14,6 +14,49 @@ const Header = ({ children }) => {
       ? setScreenWindow(window.screen)
       : console.log("no window")
   }, [])
+
+  const styleChoice = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: "#004267",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        width: "100%",
+        paddingInline: "20px",
+        backgroundColor: "#004267",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        width: "100%",
+        paddingInline: "20px",
+        backgroundColor: "#004267",
+      }
+    } else {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: "#004267",
+      }
+    }
+  }
+
   if (screenWindow !== "") {
     console.log(screenWindow)
     return (
@@ -33,12 +76,13 @@ const Header = ({ children }) => {
         />
         <div
           className="description"
-          style={{
+          /* style={{
             backgroundColor: "#004267",
             paddingBlockStart: "1rem",
             marginBlockStart: "-8px",
             width: "100vw",
-          }}
+          }} */
+          style={styleChoice()}
         >
           <p
             className={

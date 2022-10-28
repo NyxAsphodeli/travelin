@@ -17,44 +17,44 @@ const Navbar = ({ href, text }) => {
     router.push(href)
   }
   const styleChoice = () => {
-    if (text === "Home" && screenWindow.width < 768) {
+    if (screenWindow.width <= 600) {
       return {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "flex-start",
         alignItems: "center",
         width: "100%",
         height: "60px",
+        paddingInline: "20px",
       }
-    } else if (text === "Home" && screenWindow.width >= 768) {
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
       return {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "flex-start",
         alignItems: "center",
         width: "100%",
         height: "60px",
+        paddingInline: "20px",
       }
-    } else if (text !== "Home" && screenWindow.width < 768) {
+    } else if (screenWindow.width > 1024) {
       return {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "flex-start",
         alignItems: "center",
         width: "100%",
         height: "60px",
+        paddingInline: "20px",
       }
     } else {
       return {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "flex-start",
         alignItems: "center",
-        width: "100vw",
+        width: "100%",
         height: "60px",
-        padding: "0px",
-        margin: "0px",
-        paddingInline: "20%",
       }
     }
   }
@@ -86,7 +86,7 @@ const Navbar = ({ href, text }) => {
             width="133px"
             height="30px"
           />
-          <button
+          {/*  <button
             className={styles.nakedElement}
             style={{ backgroundColor: "#ffffff" }}
           >
@@ -96,7 +96,7 @@ const Navbar = ({ href, text }) => {
               width={48.75}
               height={30}
             />
-          </button>
+          </button> */}
         </div>
       </div>
     )

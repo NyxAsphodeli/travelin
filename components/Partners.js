@@ -13,40 +13,75 @@ const Partners = ({ title }) => {
       ? setScreenWindow(window.screen)
       : console.log("no window")
   }, [])
+
+  const styleChoicePartnersContainer = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+        width: "80vw",
+        height: "auto",
+        alignItems: "center",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+        width: "80vw",
+        height: "auto",
+        alignItems: "center",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+        width: "80vw",
+        height: "auto",
+        alignItems: "center",
+      }
+    } else {
+      return {
+        display: "flex",
+        flexDirection: "column",
+        width: "80vw",
+        height: "auto",
+        alignItems: "center",
+      }
+    }
+  }
+  const styleChoicePartnersTitle = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        fontSize: "1.6em",
+        marginInline: "0px",
+        textAlign: "left",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        fontSize: "1.6em",
+        marginInline: "0px",
+        textAlign: "left",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        fontSize: "1.6em",
+        marginInline: "0px",
+        textAlign: "left",
+      }
+    } else {
+      return {
+        fontSize: "1.6em",
+        marginInline: "0px",
+        textAlign: "left",
+      }
+    }
+  }
+
   if (screenWindow !== "") {
     return (
-      <div
-        style={
-          screenWindow.width < 768
-            ? {
-                display: "flex",
-                flexDirection: "column",
-                width: "80vw",
-                height: "auto",
-              }
-            : {
-                display: "flex",
-                flexDirection: "column",
-                width: "80vw",
-                marginBlockStart: "20px",
-              }
-        }
-      >
-        <p
-          style={
-            screenWindow.width < 768
-              ? {
-                  fontSize: "1.6em",
-                  marginInline: "0px",
-                  textAlign: "left",
-                }
-              : {
-                  fontSize: "1.6em",
-                  padding: "0px",
-                  marginInline: "0px",
-                  textAlign: "left",
-                }
-          }
+      <div className="partnersContainer" style={styleChoicePartnersContainer()}>
+        <p /* className="partnersTitle" style={styleChoicePartnersTitle()} */
+          className={styles.nakedElement + " " + styles.howTitle}
         >
           <b> {title}</b>
         </p>

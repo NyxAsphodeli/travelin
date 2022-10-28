@@ -12,20 +12,47 @@ const Partecipa = ({ children }) => {
       ? setScreenWindow(window.screen)
       : console.log("no window")
   }, [])
+
+  const styleChoicePartecipaContainer = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    } else {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    }
+  }
+
   if (screenWindow !== "") {
     console.log(screenWindow)
     return (
       <div
+        className="styleChoicePartecipaContainer" /* style={styleChoiceCard()} */
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          width: "100vw",
+          width: "100%",
           backgroundColor: "#e4f9f6",
           marginBlock: "0px",
         }}
       >
         <div
+          className="contentColumn"
           style={
             screenWindow.width < 768
               ? {
@@ -45,6 +72,14 @@ const Partecipa = ({ children }) => {
                 }
           }
         >
+          <div style={{ paddingInline: "5px" }}>
+            <Image
+              src="https://i.ibb.co/G0pCRcY/Illustrazione-investi.png"
+              alt="illustrazione"
+              width="597"
+              height="324"
+            />
+          </div>
           <div
             style={
               screenWindow.width < 768
@@ -78,14 +113,7 @@ const Partecipa = ({ children }) => {
             >
               {`Partecipa al cambiamento`}
             </p>
-            <div style={{ paddingInline: "5px" }}>
-              <Image
-                src="https://i.ibb.co/G0pCRcY/Illustrazione-investi.png"
-                alt="illustrazione"
-                width="597"
-                height="324"
-              />
-            </div>
+
             <p
               style={
                 screenWindow.width < 768

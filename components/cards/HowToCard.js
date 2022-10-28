@@ -10,46 +10,104 @@ const HowToCard = ({ title, text, image }) => {
       ? setScreenWindow(window.screen)
       : console.log("no window")
   }, [])
+
+  const styleChoiceCard = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        height: "auto",
+        backgroundColor: "white",
+        borderWidth: "0px",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
+        height: "auto",
+        backgroundColor: "white",
+        borderWidth: "0px",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+        width: "60%",
+        height: "auto",
+        backgroundColor: "white",
+        borderWidth: "0px",
+      }
+    } else {
+      return {
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        height: "auto",
+        backgroundColor: "white",
+        borderWidth: "0px",
+      }
+    }
+  }
+  const styleChoiceCardImage = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        borderRadius: "10px",
+        height: "156px",
+        objectFit: "cover",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        borderRadius: "10px",
+        height: "156px",
+        objectFit: "cover",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        borderRadius: "10px",
+        height: "156px",
+        objectFit: "cover",
+      }
+    } else {
+      return {
+        borderRadius: "10px",
+        height: "156px",
+        objectFit: "cover",
+      }
+    }
+  }
+  const styleChoiceCardBody = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    } else {
+      return {
+        display: "flex",
+        flexDirection: "column",
+      }
+    }
+  }
+
   if (screenWindow !== "") {
     return (
-      <Card
-        style={
-          screenWindow.width < 768
-            ? {
-                width: "100%",
-                height: "auto",
-                backgroundColor: "white",
-                borderWidth: "0px",
-              }
-            : {
-                width: "20vw",
-                height: "auto",
-                backgroundColor: "white",
-                borderWidth: "0px",
-                marginInline: "20px",
-              }
-        }
-      >
-        <Card.Img
-          variant="top"
-          src={image}
-          style={
-            screenWindow.width < 768
-              ? {
-                  borderRadius: "10px",
-                  height: "156px",
-                  width: "80vw",
-                  objectFit: "cover",
-                }
-              : {
-                  borderRadius: "10px",
-                  height: "auto",
-                  width: "100%",
-                  objectFit: "unset",
-                }
-          }
-        />
-        <Card.Body style={{ padding: "0px", marginInline: "0px" }}>
+      <Card style={styleChoiceCard()}>
+        <Card.Img variant="top" src={image} style={styleChoiceCardImage()} />
+        <Card.Body
+          style={styleChoiceCardBody()} /* style={{ padding: "0px", marginInline: "0px" }} */
+        >
           <Card.Title
             style={{
               paddingBlockStart: "8px",
