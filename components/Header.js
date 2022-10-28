@@ -39,7 +39,7 @@ const Header = ({ children }) => {
       return {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "flex-start",
+        justifyContent: "center",
         alignItems: "center",
         width: "100%",
         paddingInline: "20px",
@@ -53,6 +53,27 @@ const Header = ({ children }) => {
         alignItems: "center",
         width: "100%",
         backgroundColor: "#004267",
+      }
+    }
+  }
+  const styleChoiceIntro = () => {
+    if (screenWindow.width <= 600) {
+      return {
+        width: "100%",
+      }
+    } else if (screenWindow.width > 600 && screenWindow.width <= 1024) {
+      return {
+        width: "100%",
+        paddingBlockEnd: "40px",
+      }
+    } else if (screenWindow.width > 1024) {
+      return {
+        width: "55%",
+        paddingBlockEnd: "60px",
+      }
+    } else {
+      return {
+        width: "100%",
       }
     }
   }
@@ -74,20 +95,17 @@ const Header = ({ children }) => {
           width="311px"
           height="512px"
         />
-        <div
-          className="description"
-          /* style={{
-            backgroundColor: "#004267",
-            paddingBlockStart: "1rem",
-            marginBlockStart: "-8px",
-            width: "100vw",
-          }} */
-          style={styleChoice()}
-        >
+        <div className="description" style={styleChoice()}>
           <p
             className={
-              styles.white + " " + styles.pMobile + " " + styles.weight500
+              "Intro " +
+              styles.white +
+              " " +
+              styles.pMobile +
+              " " +
+              styles.weight500
             }
+            style={styleChoiceIntro()}
           >{`Esplora la bellezza dell’Italia attraverso itinerari ed esperienze uniche. Immergiti in ciò che ti circonda, crea itinerari e guarda quelli di guide turistiche e altri utenti.`}</p>
         </div>
       </header>
