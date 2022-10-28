@@ -2,13 +2,17 @@ import React from "react"
 import styles from "../../styles/Home.module.css"
 const MainButton = ({ cta }) => {
   return (
-    <a href="tel:331 848 2994">
+    <a
+      className="buttonCall"
+      style={{ width: "250px" }}
+      href="tel:331 848 2994"
+    >
       <div
         style={{
           color: "white",
           backgroundColor: "#004267",
           height: "40px",
-          width: "auto",
+          width: "100%",
           borderRadius: "10px",
           textAlign: "center",
           marginBlock: "20px",

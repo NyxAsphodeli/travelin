@@ -48,7 +48,8 @@ const Partecipa = ({ children }) => {
           alignItems: "center",
           width: "100%",
           backgroundColor: "#e4f9f6",
-          marginBlock: "0px",
+          marginBlockStart: "40px",
+          paddingBlock: "40px",
         }}
       >
         <div
@@ -72,7 +73,7 @@ const Partecipa = ({ children }) => {
                 }
           }
         >
-          <div style={{ paddingInline: "5px" }}>
+          <div style={{ paddingInline: "50px" }}>
             <Image
               src="https://i.ibb.co/G0pCRcY/Illustrazione-investi.png"
               alt="illustrazione"
@@ -135,7 +136,16 @@ const Partecipa = ({ children }) => {
 e l’accessibilità. 
 é il tuo campo?  `}
             </p>
-            <MainButton cta={`CONTATTACI`} />
+            <div
+              className={styles.nakedElement}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+              }}
+            >
+              <MainButton cta={`CONTATTACI`} />
+            </div>
             {/* <div
               style={{
                 display: "flex",

@@ -172,6 +172,7 @@ const Body = ({ children }) => {
           </p>
 
           <div
+            className="valoriFondantiDiv"
             style={
               screenWindow.width < 768
                 ? {
@@ -179,7 +180,7 @@ const Body = ({ children }) => {
                     flexDirection: "column-reverse",
                     marginInline: "0px",
                     textAlign: "left",
-                    marginInline: "5%",
+                    marginBlockEnd: "40px",
                   }
                 : {
                     display: "flex",
@@ -188,7 +189,8 @@ const Body = ({ children }) => {
                     fontSize: "2em",
                     padding: "0px",
                     textAlign: "left",
-                    marginBlockEnd: "20px",
+                    marginBlockEnd: "40px",
+                    marginBlockStart: "20px",
                   }
             }
           >
@@ -200,7 +202,6 @@ const Body = ({ children }) => {
                       flexDirection: "column",
                       marginInline: "0px",
                       textAlign: "left",
-                      paddingInline: "5%",
                     }
                   : {
                       display: "flex",
@@ -209,11 +210,11 @@ const Body = ({ children }) => {
                       fontSize: "2em",
                       padding: "0px",
                       textAlign: "left",
-                      marginBlock: "20px",
                     }
               }
             >
               <p
+                className={styles.nakedElement}
                 style={
                   screenWindow.width < 768
                     ? {
@@ -223,15 +224,15 @@ const Body = ({ children }) => {
                       }
                     : {
                         fontSize: "1.4rem",
-                        padding: "0px",
+                        padding: "5px",
                         textAlign: "left",
-                        marginBlock: "20px",
                       }
                 }
               >
                 <b> {`Un turismo sostenibile`}</b>
               </p>
               <p
+                className={styles.nakedElement}
                 style={
                   screenWindow.width < 768
                     ? {
@@ -243,7 +244,6 @@ const Body = ({ children }) => {
                         fontSize: "1.2rem",
                         padding: "0px",
                         textAlign: "left",
-                        marginBlock: "20px",
                       }
                 }
               >
@@ -274,7 +274,6 @@ const Body = ({ children }) => {
                       fontSize: "2em",
                       padding: "0px",
                       textAlign: "left",
-                      marginBlock: "20px",
                     }
               }
             >
@@ -294,7 +293,6 @@ const Body = ({ children }) => {
                     flexDirection: "column",
                     marginInline: "0px",
                     textAlign: "left",
-                    marginInline: "5%",
                   }
                 : {
                     display: "flex",
@@ -303,7 +301,6 @@ const Body = ({ children }) => {
                     fontSize: "2em",
                     padding: "0px",
                     textAlign: "left",
-                    marginBlock: "20px",
                   }
             }
           >
@@ -324,7 +321,6 @@ const Body = ({ children }) => {
                       fontSize: "2em",
                       padding: "0px",
                       textAlign: "left",
-                      marginBlock: "20px",
                     }
               }
             >
@@ -337,13 +333,12 @@ const Body = ({ children }) => {
             </div>
             <div
               style={
-                screenWindow.width < 768
+                screenWindow.width < 600
                   ? {
                       display: "flex",
                       flexDirection: "column",
                       marginInline: "0px",
                       textAlign: "left",
-                      paddingInline: "5%",
                     }
                   : {
                       display: "flex",
@@ -352,11 +347,11 @@ const Body = ({ children }) => {
                       fontSize: "2em",
                       padding: "0px",
                       textAlign: "left",
-                      marginBlock: "20px",
                     }
               }
             >
               <p
+                className={styles.nakedElement}
                 style={
                   screenWindow.width < 768
                     ? {
@@ -366,17 +361,18 @@ const Body = ({ children }) => {
                       }
                     : {
                         fontSize: "1.4rem",
-                        padding: "0px",
+                        padding: "5px",
                         textAlign: "left",
-                        marginBlock: "20px",
+                        marginInlineStart: "20px",
                       }
                 }
               >
                 <b> {`Progettato per tutti`}</b>
               </p>
               <p
+                className={styles.nakedElement}
                 style={
-                  screenWindow.width < 768
+                  screenWindow.width < 600
                     ? {
                         fontSize: "1rem",
                         marginInline: "0px",
@@ -387,6 +383,7 @@ const Body = ({ children }) => {
                         padding: "0px",
                         textAlign: "left",
                         marginBlock: "20px",
+                        marginInlineStart: "20px",
                       }
                 }
               >
