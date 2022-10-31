@@ -91,6 +91,18 @@ export default function Home() {
           {/* <Explore /> */}
           <footer>
             <Contatti />
+            <p
+              style={{
+                color: "#deefef",
+                backgroundColor: "#004267",
+                width: "100%",
+                padding: "0px",
+                margin: "0px",
+                borderTop: "0px",
+              }}
+            >
+              Travelin srl - C.F. e Partita Iva 12738180012
+            </p>
           </footer>{" "}
           {/*   </div> */}
         </main>
