@@ -134,7 +134,7 @@ const Partecipa = ({ children }) => {
             >
               {`Vogliamo creare una nuova realtà che esalti il turismo 
 e l’accessibilità. 
-é il tuo campo?  `}
+È il tuo campo?  `}
             </p>
             <div
               className={styles.nakedElement}

@@ -70,6 +70,8 @@ const Header = ({ children }) => {
       return {
         width: "55%",
         paddingBlockEnd: "60px",
+        marginBlockStart: "-290px",
+        zIndex: "1",
       }
     } else {
       return {
