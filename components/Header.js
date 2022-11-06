@@ -3,9 +3,11 @@ import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import { useRouter } from "next/router"
 import bg from "../public/bg.png"
+import bgBig from "../public/bgBig.png"
 
 const Header = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
+  const [backgroundImage, setBackgroundImage] = useState({ bg })
   useEffect(() => {
     typeof document !== undefined
       ? require("bootstrap/dist/css/bootstrap.min.css")
@@ -91,12 +93,21 @@ const Header = ({ children }) => {
           width: "100%",
         }}
       >
-        <Image
-          src={bg}
-          alt="a beautiful sunrise over an old style map"
-          width="311px"
-          height="512px"
-        />
+        {screenWindow.width < "600px" ? (
+          <Image
+            src={bg}
+            alt="a beautiful sunrise over an old style map"
+            width="311px"
+            height="512px"
+          />
+        ) : (
+          <Image
+            src={bgBig}
+            alt="a beautiful sunrise over an old style map"
+            width="512px"
+            height="359px"
+          />
+        )}
         <div className="description" style={styleChoice()}>
           <p
             className={
