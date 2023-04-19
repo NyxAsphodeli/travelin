@@ -49,3 +49,26 @@
   margin-block: 40px 30px;
   line-height: 1.2;
 }
+
+.navbarButton {
+  background-color: #ffffff;
+  color: rgb(0, 66, 103);
+  font-weight: 500;
+}
+.navbarButton:hover {
+  font-weight: 800;
+  background-color: #ffffff;
+  text-decoration: underline;
+  color: rgb(0, 66, 103);
+}
+.navbarButton:active {
+  font-weight: 800;
+  background-color: #ffffff;
+  text-decoration: underline;
+  color: rgb(0, 66, 103);
+}
+.navbarButton:disabled {
+  font-weight: 500;
+  background-color: #ffffff;
+  color: rgba(0, 65, 103, 0.332);
+}

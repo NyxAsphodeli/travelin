@@ -28,7 +28,6 @@ const Layout = ({ children }) => {
                 display: "flex",
                 flexDirection: "column",
                 padding: "0px",
-                width: "100vw",
               }
         }
       >

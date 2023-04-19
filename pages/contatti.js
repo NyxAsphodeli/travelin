@@ -9,11 +9,9 @@ function Contatti() {
       style={{
         minHeight: "20vh",
         maxHeight: "20vh",
-        backgroundColor: "#004267",
         maxWidth: "100%",
         minWidth: "100%",
         display: "flex",
-        color: "#deefef",
         justifyContent: "space-around",
       }}
     >

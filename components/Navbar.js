@@ -31,7 +31,7 @@ const Navbar = ({ href, text }) => {
       return {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
         height: "60px",
@@ -41,7 +41,7 @@ const Navbar = ({ href, text }) => {
       return {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
         height: "60px",
@@ -86,6 +86,33 @@ const Navbar = ({ href, text }) => {
             width="133px"
             height="30px"
           />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "50vw",
+              justifyContent: "space-around",
+            }}
+          >
+            <button
+              disabled
+              className={styles.nakedElement + " " + styles.navbarButton}
+            >
+              Travelin
+            </button>
+            <button
+              disabled
+              className={styles.nakedElement + " " + styles.navbarButton}
+            >
+              Viaggia inclusivo
+            </button>
+            <button
+              disabled
+              className={styles.nakedElement + " " + styles.navbarButton}
+            >
+              Per le aziende
+            </button>
+          </div>
           {/*  <button
             className={styles.nakedElement}
             style={{ backgroundColor: "#ffffff" }}

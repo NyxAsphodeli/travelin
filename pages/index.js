@@ -78,23 +78,51 @@ export default function Home() {
             position: "relative",
             top: "0px",
             left: "0px",
+            scrollSnapType: "y mandatory",
           }}
         >
           <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
           <Header />
-          <Body />
+          {/* <li
+              style={{
+                scrollSnapAlign: "start",
+                flexFlow: "column",
+                listStyle: "none",
+              }}
+            >
+              <Body />
+            </li> */}
           {/* <Video />
             <Ambassadors /> */}
-          <Partners title={`Si fidano di noi`} />
-          <Partecipa />
+          {/* <li
+              style={{
+                scrollSnapAlign: "start",
+                flexFlow: "column",
+                listStyle: "none",
+              }}
+            >
+              <Partners title={`Si fidano di noi`} />
+            </li>
+            <li
+              style={{
+                scrollSnapAlign: "start",
+                flexFlow: "column",
+                listStyle: "none",
+              }}
+            >
+              <Partecipa />
+            </li> */}
           {/* <Invest /> */}
           {/* <Explore /> */}
-          <footer>
+          <footer
+            style={{
+              background: "linear-gradient(180deg, #9EA5FF 0%, #2A36D8 100%)",
+            }}
+          >
             <Contatti />
             <p
               style={{
                 color: "#deefef",
-                backgroundColor: "#004267",
                 width: "100%",
                 padding: "0px",
                 margin: "0px",
