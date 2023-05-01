@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Contatti from "./contatti"
-import Header from "../components/Header"
+import Header from "../components/OnePageHome"
 import Body from "../components/Body"
 import Explore from "../components/Explore"
 import Invest from "../components/Invest"

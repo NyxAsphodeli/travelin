@@ -18,7 +18,7 @@ import roma from "../public/roma.png"
 import torino from "../public/torino.png"
 import flussoUtente from "../public/flussoUtente.png"
 
-const Header = ({ children }) => {
+const OnePageHome = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
   const [backgroundImage, setBackgroundImage] = useState({ bg })
   useEffect(() => {
@@ -394,4 +394,4 @@ const Header = ({ children }) => {
     return <p>loading</p>
   }
 }
-export default Header
+export default OnePageHome
