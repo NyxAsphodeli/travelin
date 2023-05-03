@@ -12,7 +12,7 @@ import localExperience0 from "../public/local-experience0.png"
 import community0 from "../public/community0.png"
 import community from "../public/community.png"
 import esploraSmart from "../public/esplora-smart.png"
-import esploraSenzaLimiti from "../public/esplora-senza-limiti.png"
+import viaggiasenzalimiti from "../public/viaggiasenzalimiti.png"
 import milano from "../public/milano.png"
 import roma from "../public/roma.png"
 import torino from "../public/torino.png"
@@ -434,36 +434,36 @@ const OnePageHome = ({ children }) => {
           </div>
         </div>
         <div
-          className="imgASinistra"
+          className="imgADestra"
           style={{
             display: "flex",
             flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
-            marginBlockStart: "60px",
+            marginBlock: "60px",
           }}
         >
           <Image
-            src={esploraSenzaLimiti}
-            alt="travelin app local esplora senza limiti mockup"
+            src={viaggiasenzalimiti}
+            alt="travelin app local communviaggiasenzalimitiity mockup"
             width="611px"
             height="604px"
             objectFit="contain"
           />
           <div
-            className="Esplora senza limiti"
-            style={{ paddingInline: "20px" }}
+            className="Viaggia senza limiti"
+            style={{
+              paddingInline: "20px",
+              width: screenWindow.width < 600 ? "100%" : "50%",
+            }}
           >
-            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
+            <div style={{}}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
-                Esplora senza limiti
+                Viaggia senza limiti
               </h1>
-              <p
-                style={{
-                  fontSize: "16px",
-                }}
-              >
+              <p style={{ fontSize: "16px", textAlign: "start", margin: 0 }}>
                 Crea la tua nuova avventura!
               </p>
+              <br></br>
             </div>
             <div>
               <h3 style={{ fontSize: "16px", fontVariant: "all-small-caps" }}>
