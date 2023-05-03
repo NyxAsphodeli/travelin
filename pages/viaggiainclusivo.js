@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Contatti from "./contatti"
-import OnePageHome from "../components/OnePageHome"
+import ViaggiaInclusivo from "../components/ViaggiaInclusivo"
 import Body from "../components/Body"
 import Explore from "../components/Explore"
 import Invest from "../components/Invest"
@@ -51,13 +51,13 @@ https://i.ibb.co/Tvbx2zn/bgimg-travelin-drawio.png
 https://i.ibb.co/xhgcg1v/mock-up-travelin-ritaglio.png
 https://i.ibb.co/ncrKLFc/QRCODE.png
 */
-export default function Home() {
+export default function ViaggiaInclusivoOnePage() {
   let wip = false
   if (!wip) {
     return (
       <>
         <Head>
-          <title>Travelin</title>
+          <title>Viaggia Inclusivo</title>
           <link rel="icon" href="https://i.ibb.co/Cb640PJ/Logo-White-Bg.png" />
           <meta
             name="description"
@@ -81,8 +81,8 @@ export default function Home() {
             scrollSnapType: "y mandatory",
           }}
         >
-          <Navbar active={"home"} />
-          <OnePageHome />
+          <Navbar active={"viaggiainclusivo"} />
+          <ViaggiaInclusivo />
           {/* <li
               style={{
                 scrollSnapAlign: "start",

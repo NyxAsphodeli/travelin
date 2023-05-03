@@ -11,9 +11,9 @@ import sandwich from "../public/menu.png"
 // styles
 import styles from "../styles/Home.module.css"
 
-const Navbar = ({ href, text }) => {
+const Navbar = ({ active }) => {
   const router = useRouter()
-  const handleClick = () => {
+  const handleClick = (href) => {
     router.push(href)
   }
   const styleChoice = () => {
@@ -58,11 +58,14 @@ const Navbar = ({ href, text }) => {
       }
     }
   }
+
   const [screenWindow, setScreenWindow] = useState("")
   useEffect(() => {
-    typeof document !== undefined
-      ? require("bootstrap/dist/css/bootstrap.min.css")
-      : null
+    console.log("active inside useEffect", active)
+
+    if (typeof document !== undefined) {
+      require("bootstrap/dist/css/bootstrap.min.css")
+    }
     typeof window !== undefined
       ? setScreenWindow(window.screen)
       : console.log("no window")
@@ -95,20 +98,41 @@ const Navbar = ({ href, text }) => {
             }}
           >
             <button
-              disabled
-              className={styles.nakedElement + " " + styles.navbarButton}
+              id="home"
+              onClick={() => handleClick("/")}
+              className={
+                styles.nakedElement +
+                " " +
+                styles.navbarButton +
+                " " +
+                (active === "home" ? styles.active : "")
+              }
             >
               Travelin
             </button>
             <button
-              disabled
-              className={styles.nakedElement + " " + styles.navbarButton}
+              id="viaggiainclusivo"
+              onClick={() => handleClick("/viaggiainclusivo")}
+              className={
+                styles.nakedElement +
+                " " +
+                styles.navbarButton +
+                " " +
+                (active === "viaggiainclusivo" ? styles.active : "")
+              }
             >
               Viaggia inclusivo
             </button>
             <button
+              id="perleaziende"
               disabled
-              className={styles.nakedElement + " " + styles.navbarButton}
+              className={
+                styles.nakedElement +
+                " " +
+                styles.navbarButton +
+                " " +
+                (active === "perleaziende" ? styles.active : "")
+              }
             >
               Per le aziende
             </button>
