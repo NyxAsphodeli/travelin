@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import styles from "../styles/Home.module.css"
+import perLeAziendeModule from "../styles/per-le-aziende.module.css"
+
 import { useRouter } from "next/router"
 import bg from "../public/bg.png"
 import bgBig from "../public/bgBig.png"
@@ -21,6 +23,37 @@ import flussoUtente from "../public/flussoUtente.png"
 const ViaggiaInclusivoOnePage = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
   const [backgroundImage, setBackgroundImage] = useState({ bg })
+  // countdown date
+  const [countdownTime, setCountdownTime] = useState("")
+  function msToTime(duration) {
+    var milliseconds = Math.floor((duration % 1000) / 100),
+      seconds = Math.floor((duration / 1000) % 60),
+      minutes = Math.floor((duration / (1000 * 60)) % 60),
+      hours = Math.floor((duration / (1000 * 60 * 60)) % 24),
+      days = Math.floor(duration / (1000 * 60 * 60 * 24))
+
+    days = days < 10 ? "0" + days : days
+    hours = hours < 10 ? "0" + hours : hours
+    minutes = minutes < 10 ? "0" + minutes : minutes
+    seconds = seconds < 10 ? "0" + seconds : seconds
+
+    return "-" + days + " g : " + hours + " ore : " + minutes + "m"
+  }
+  useEffect(() => {
+    const ms = Math.abs(new Date(2023, 4, 19) - new Date())
+    setCountdownTime(msToTime(ms))
+
+    const intervalId = setInterval(() => {
+      const ms = Math.abs(new Date(2023, 4, 19) - new Date())
+      setCountdownTime(msToTime(ms))
+    }, 60000)
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId)
+      }
+    }
+  })
   useEffect(() => {
     typeof document !== undefined
       ? require("bootstrap/dist/css/bootstrap.min.css")
@@ -260,8 +293,15 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
               <h3 style={{ fontSize: "16px", fontVariant: "all-small-caps" }}>
                 COUNT DOWN:
               </h3>
-              <h3 style={{ fontSize: "24px", marginBlockStart: "-10px" }}>
-                24 g : 8 ore : 11 m
+              <h3
+                className={perLeAziendeModule.titleH3}
+                style={{
+                  fontWeight: 700,
+                  margin: 0,
+                  marginTop: 8,
+                }}
+              >
+                {countdownTime}
               </h3>
               <button
                 style={{
