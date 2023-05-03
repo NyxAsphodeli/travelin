@@ -13,6 +13,7 @@ import signIcon from "../public/sign-icon.png"
 import supportersLogoBig from "../public/supporters-logos-big.png"
 import supportersLogoSmall from "../public/supporters-logos-small.png"
 import cardGradientWallpaper from "../public/card-gradient-wallpaper.png"
+import panchinaDegliInnamorati from "../public/panchina-degli-innamorati.png"
 
 const PerLeAziende = () => {
   const defaultTextColor = "#02030C"
@@ -25,6 +26,40 @@ const PerLeAziende = () => {
       setWindowWidth(window.innerWidth)
     })
   }, [])
+
+  // countdown date
+  const [countdownTime, setCountdownTime] = useState("")
+
+  function msToTime(duration) {
+    var milliseconds = Math.floor((duration % 1000) / 100),
+      seconds = Math.floor((duration / 1000) % 60),
+      minutes = Math.floor((duration / (1000 * 60)) % 60),
+      hours = Math.floor((duration / (1000 * 60 * 60)) % 24),
+      days = Math.floor(duration / (1000 * 60 * 60 * 24))
+
+    days = days < 10 ? "0" + days : days
+    hours = hours < 10 ? "0" + hours : hours
+    minutes = minutes < 10 ? "0" + minutes : minutes
+    seconds = seconds < 10 ? "0" + seconds : seconds
+
+    return "-" + days + " g : " + hours + " ore : " + minutes + "m"
+  }
+
+  useEffect(() => {
+    const ms = Math.abs(new Date(2023, 4, 19) - new Date())
+    setCountdownTime(msToTime(ms))
+
+    const intervalId = setInterval(() => {
+      const ms = Math.abs(new Date(2023, 4, 19) - new Date())
+      setCountdownTime(msToTime(ms))
+    }, 60000)
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId)
+      }
+    }
+  })
 
   return (
     <>
@@ -467,6 +502,7 @@ const PerLeAziende = () => {
                       lineHeight: "26px",
                       marginTop: 8,
                       marginBottom: 42,
+                      color: defaultTextColor,
                     }}
                   >
                     Organizza facilmente visite turistiche e tour guidati.
@@ -512,6 +548,7 @@ const PerLeAziende = () => {
                       lineHeight: "26px",
                       marginTop: 8,
                       marginBottom: 42,
+                      color: defaultTextColor,
                     }}
                   >
                     Organizzare attività esperienziali: mostre, degustazioni,
@@ -526,6 +563,94 @@ const PerLeAziende = () => {
                 layout="fill"
                 objectFit="cover"
               />
+            </div>
+            <div
+              className={perLeAziendeModule.header}
+              style={{
+                width: windowWidth > 992 ? "100vw" : "100%",
+                maxWidth: "100vw",
+                display: "flex",
+                marginLeft: windowWidth > 992 ? "-160px" : 0,
+                marginTop: windowWidth < 1100 && windowWidth > 992 ? -50 : 0,
+                marginBottom:
+                  windowWidth < 1100 && windowWidth > 992
+                    ? -50
+                    : windowWidth < 992
+                    ? 80
+                    : 0,
+                flexDirection: windowWidth > 992 ? "row" : "column",
+              }}
+            >
+              <div
+                className={perLeAziendeModule.headerItemImage3}
+                style={{
+                  width: windowWidth > 992 ? "50%" : "100%",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src={panchinaDegliInnamorati}
+                  alt="La panchina degli innamorati di Torino"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <div
+                style={{
+                  width: windowWidth > 992 ? "50%" : "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  paddingLeft: "4vw",
+                  paddingRight: windowWidth > 750 ? 160 : 0,
+                }}
+              >
+                <h2
+                  className={perLeAziendeModule.titleH2}
+                  style={{
+                    fontWeight: 800,
+                    color: defaultTextColor,
+                    margin: 0,
+                  }}
+                >
+                  Viaggia senza limiti
+                </h2>
+                <p
+                  className={perLeAziendeModule.subtitle}
+                  style={{
+                    fontWeight: 600,
+                    color: defaultTextColor,
+                    margin: 0,
+                    lineHeight: "34px",
+                    marginTop: 8,
+                  }}
+                >
+                  Crea la tua nuova avventura!
+                </p>
+                <p
+                  className={perLeAziendeModule.subtitle}
+                  style={{
+                    fontWeight: 900,
+                    color: defaultTextColor,
+                    margin: 0,
+                    lineHeight: "34px",
+                    marginTop: windowWidth < 450 ? 22 : 42,
+                  }}
+                >
+                  COUNTDOWN:
+                </p>
+                <h3
+                  className={perLeAziendeModule.titleH3}
+                  style={{
+                    fontWeight: 700,
+                    color: defaultTextColor,
+                    margin: 0,
+                    marginTop: 8,
+                  }}
+                >
+                  {countdownTime}
+                </h3>
+              </div>
             </div>
           </div>
           {/* <div style={{ minHeight: 100 }} /> */}

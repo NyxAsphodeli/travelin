@@ -77,6 +77,10 @@
     margin-top: 30px;
   }
 
+  .headerItemImage3 {
+    height: 600px;
+  }
+
   .main {
     padding-inline: 80px;
     padding-top: 45px;
@@ -123,6 +127,10 @@
     margin-top: 0px;
   }
 
+  .headerItemImage3 {
+    height: 500px;
+  }
+
   .main {
     padding-inline: 60px;
     padding-top: 45px;
@@ -147,6 +155,10 @@
   .headerItemImage2 {
     height: 600px;
     margin-top: -60px;
+  }
+
+  .headerItemImage3 {
+    height: 400px;
   }
 }
 
@@ -181,6 +193,10 @@
     height: 350px;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+
+  .headerItemImage3 {
+    height: 350px;
   }
 
   .main {
