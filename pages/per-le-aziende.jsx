@@ -85,7 +85,7 @@ const PerLeAziende = () => {
           left: "0px",
         }}
       >
-        <Navbar href={"/chi_siamo"} text={"Chi siamo"} />
+        <Navbar active={"per-le-aziende"} />
         <header style={{ width: "100%" }}>
           <div className={perLeAziendeModule.main}>
             <div
@@ -660,7 +660,7 @@ const PerLeAziende = () => {
         </header>
         <footer
           style={{
-            background: "linear-gradient(180deg, #9EA5FF 0%, #2A36D8 100%)",
+            backgroundColor: "#9EA5FF",
           }}
         >
           <Contatti />

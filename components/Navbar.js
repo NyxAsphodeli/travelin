@@ -111,27 +111,27 @@ const Navbar = ({ active }) => {
               Travelin
             </button>
             <button
-              id="viaggiainclusivo"
-              onClick={() => handleClick("/viaggiainclusivo")}
+              id="viaggia-inclusivo"
+              onClick={() => handleClick("/viaggia-inclusivo")}
               className={
                 styles.nakedElement +
                 " " +
                 styles.navbarButton +
                 " " +
-                (active === "viaggiainclusivo" ? styles.active : "")
+                (active === "viaggia-inclusivo" ? styles.active : "")
               }
             >
               Viaggia inclusivo
             </button>
             <button
-              id="perleaziende"
-              disabled
+              id="per-le-aziende"
+              onClick={() => handleClick("/per-le-aziende")}
               className={
                 styles.nakedElement +
                 " " +
                 styles.navbarButton +
                 " " +
-                (active === "perleaziende" ? styles.active : "")
+                (active === "per-le-aziende" ? styles.active : "")
               }
             >
               Per le aziende

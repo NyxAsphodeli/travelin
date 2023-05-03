@@ -81,7 +81,7 @@ export default function ViaggiaInclusivoOnePage() {
             scrollSnapType: "y mandatory",
           }}
         >
-          <Navbar active={"viaggiainclusivo"} />
+          <Navbar active={"viaggia-inclusivo"} />
           <ViaggiaInclusivo />
           {/* <li
               style={{
