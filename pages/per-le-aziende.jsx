@@ -420,6 +420,9 @@ const PerLeAziende = () => {
                       justifyContent: "center",
                       boxShadow: "1px 4px 20px rgba(158, 165, 255, 0.6)",
                     }}
+                    onClick={() => {
+                      window.open("https://form.jotform.com/231156500603039")
+                    }}
                   >
                     COMPILALO
                   </div>
