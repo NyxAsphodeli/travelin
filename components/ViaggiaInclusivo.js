@@ -38,17 +38,30 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
           className="imgASinistra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column",
             alignItems: "center",
             marginBlock: "60px",
           }}
         >
           <div className="ViaggiaInclusivo" style={{ paddingInline: "20px" }}>
-            <div style={{ width: "50vw" }}>
-              <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "50%" }}>
+              <h1
+                style={{
+                  fontSize: "28px",
+                  fontWeight: "700",
+                  marginBlockEnd: "30px",
+                }}
+              >
                 Viaggia Inclusivo
               </h1>
-              <p style={{ fontSize: "16px", textAlign: "start", margin: 0 }}>
+              <p
+                style={{
+                  fontSize: "16px",
+                  textAlign: "start",
+                  margin: 0,
+                  marginBlockEnd: "30px",
+                }}
+              >
                 Il turismo inclusivo è fare in modo che tutti possano viaggiare
                 e scoprire il mondo in modo sicuro e senza barriere di alcun
                 tipo.
@@ -73,7 +86,7 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
           className="imgADestra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
             marginBlock: "60px",
           }}
@@ -87,13 +100,29 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
           />
           <div
             className="Filtra per includere"
-            style={{ paddingInline: "20px" }}
+            style={{
+              paddingInline: "20px",
+              width: screenWindow.width < 600 ? "100%" : "50%",
+            }}
           >
-            <div style={{ width: "50vw" }}>
-              <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
+            <div style={{}}>
+              <h1
+                style={{
+                  fontSize: "28px",
+                  fontWeight: "700",
+                  marginBlockEnd: "30px",
+                }}
+              >
                 Filtra per includere
               </h1>
-              <p style={{ fontSize: "16px", textAlign: "start", margin: 0 }}>
+              <p
+                style={{
+                  fontSize: "16px",
+                  textAlign: "start",
+                  margin: 0,
+                  marginBlockEnd: "30px",
+                }}
+              >
                 Non possiamo abbattere muri né costruire ponti, ma possiamo
                 darti gli strumenti per trovare facilmente i luoghi che fanno al
                 caso tuo.
@@ -117,7 +146,7 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
           className="imgADestra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column",
             alignItems: "flex-start",
             marginBlockEnd: "60px",
             marginBlockStart: "30px",
@@ -131,8 +160,14 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
             objectFit="contain"
           />
 
-          <div className="Universal Design" style={{ paddingInline: "20px" }}>
-            <div style={{ width: "50vw" }}>
+          <div
+            className="Universal Design"
+            style={{
+              paddingInline: "20px",
+              width: screenWindow.width < 600 ? "100%" : "50%",
+            }}
+          >
+            <div style={{}}>
               <p style={{ fontSize: "16px", textAlign: "start", margin: 0 }}>
                 Il design di Travelin è stato progettato per essere accessibile
                 e fruibile da tutti, indipendentemente dalle disabilità o dalle
@@ -145,17 +180,26 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
           className="imgASinistra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
             marginBlock: "60px",
           }}
         >
           <div
             className="Esperienze sul territorio"
-            style={{ paddingInline: "20px" }}
+            style={{
+              paddingInline: "20px",
+              width: screenWindow.width < 600 ? "100%" : "50%",
+            }}
           >
-            <div style={{ width: "50vw" }}>
-              <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
+            <div style={{}}>
+              <h1
+                style={{
+                  fontSize: "28px",
+                  fontWeight: "700",
+                  marginBlock: "30px",
+                }}
+              >
                 Esperienze sul territorio
               </h1>
               <p style={{ fontSize: "16px", textAlign: "start", margin: 0 }}>
@@ -184,7 +228,7 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
           className="imgADestra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
             marginBlock: "60px",
           }}
@@ -198,17 +242,18 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
           />
           <div
             className="Viaggia senza limiti"
-            style={{ paddingInline: "20px" }}
+            style={{
+              paddingInline: "20px",
+              width: screenWindow.width < 600 ? "100%" : "50%",
+            }}
           >
-            <div style={{ width: "50vw" }}>
+            <div style={{}}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Viaggia senza limiti
               </h1>
               <p style={{ fontSize: "16px", textAlign: "start", margin: 0 }}>
                 Crea la tua nuova avventura!
               </p>
-              <br></br>
-              <br></br>
               <br></br>
             </div>
             <div>

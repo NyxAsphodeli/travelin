@@ -52,26 +52,29 @@
 
 .navbarButton {
   background-color: #ffffff;
-  color: rgb(0, 66, 103);
+  color: #02030c;
   font-weight: 500;
+  font-size: large;
+  margin-inline: 10px;
 }
 .navbarButton:hover {
-  font-weight: 800;
   background-color: #ffffff;
   text-decoration: underline;
-  color: rgb(0, 66, 103);
+  color: #02030c;
+  font-size: large;
 }
 .navbarButton:active {
-  font-weight: 800;
   background-color: #ffffff;
   text-decoration: underline;
-  color: rgb(0, 66, 103);
+  color: #02030c;
+  font-size: large;
 }
 .active {
   font-weight: 800;
   background-color: #ffffff;
   text-decoration: none;
-  color: rgb(0, 66, 103);
+  color: #02030c;
+  font-size: large;
 }
 .navbarButton:disabled {
   font-weight: 500;

@@ -10,6 +10,7 @@ import Partners from "../components/Partners"
 import Navbar from "../components/Navbar"
 import Image from "next/image"
 import Partecipa from "../components/Partecipa"
+import Footer from "../components/Footer"
 /* 
 https://i.ibb.co/Jj9Q3tS/Marta.jpg
 https://i.ibb.co/CPYzNpm/menu.png
@@ -114,24 +115,7 @@ export default function ViaggiaInclusivoOnePage() {
             </li> */}
           {/* <Invest /> */}
           {/* <Explore /> */}
-          <footer
-            style={{
-              backgroundColor: "#9EA5FF",
-            }}
-          >
-            <Contatti />
-            <p
-              style={{
-                color: "#deefef",
-                width: "100%",
-                padding: "0px",
-                margin: "0px",
-                borderTop: "0px",
-              }}
-            >
-              Travelin srl - C.F. e Partita Iva 12738180012
-            </p>
-          </footer>{" "}
+          <Footer />
           {/*   </div> */}
         </main>
       </>

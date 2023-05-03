@@ -54,7 +54,7 @@ function Contatti() {
             Investi
           </p>
         </a>
-        <a href="mailto:martagrelli1997@gmail.com">
+        <a href="mailto:info@apptravelin.com">
           <p className={styles.white} style={{ margin: "0px", padding: "0px" }}>
             Contattaci
           </p>

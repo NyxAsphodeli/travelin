@@ -10,6 +10,7 @@ import ChiSiamo from "../components/ChiSiamo"
 import CTA from "../components/CTA"
 
 import carousel from "../styles/carousel.module.css"
+import Footer from "../components/Footer"
 /* 
 https://i.ibb.co/Jj9Q3tS/Marta.jpg
 https://i.ibb.co/CPYzNpm/menu.png
@@ -128,9 +129,7 @@ export default function Team() {
           <CTA />
           <Partners title={"Partners"} />
 
-          <footer>
-            <Contatti />
-          </footer>
+          <Footer />
         </main>
       </>
     )

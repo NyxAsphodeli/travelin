@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
-import styles from "../styles/Home.module.css"
+import perLeAziendeModule from "../styles/per-le-aziende.module.css"
 import { useRouter } from "next/router"
 import bg from "../public/bg.png"
 import bgBig from "../public/bgBig.png"
@@ -21,6 +21,37 @@ import flussoUtente from "../public/flussoUtente.png"
 const OnePageHome = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
   const [backgroundImage, setBackgroundImage] = useState({ bg })
+  // countdown date
+  const [countdownTime, setCountdownTime] = useState("")
+  function msToTime(duration) {
+    var milliseconds = Math.floor((duration % 1000) / 100),
+      seconds = Math.floor((duration / 1000) % 60),
+      minutes = Math.floor((duration / (1000 * 60)) % 60),
+      hours = Math.floor((duration / (1000 * 60 * 60)) % 24),
+      days = Math.floor(duration / (1000 * 60 * 60 * 24))
+
+    days = days < 10 ? "0" + days : days
+    hours = hours < 10 ? "0" + hours : hours
+    minutes = minutes < 10 ? "0" + minutes : minutes
+    seconds = seconds < 10 ? "0" + seconds : seconds
+
+    return "-" + days + " g : " + hours + " ore : " + minutes + "m"
+  }
+  useEffect(() => {
+    const ms = Math.abs(new Date(2023, 4, 19) - new Date())
+    setCountdownTime(msToTime(ms))
+
+    const intervalId = setInterval(() => {
+      const ms = Math.abs(new Date(2023, 4, 19) - new Date())
+      setCountdownTime(msToTime(ms))
+    }, 60000)
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId)
+      }
+    }
+  })
   useEffect(() => {
     typeof document !== undefined
       ? require("bootstrap/dist/css/bootstrap.min.css")
@@ -45,14 +76,21 @@ const OnePageHome = ({ children }) => {
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection:
+                screenWindow.width > 600 ? "row" : "column-reverse",
               alignItems: "center",
               marginBlockEnd: "30px",
             }}
           >
             <div className="description" style={{ paddingInline: "20px" }}>
               <div style={{ width: "50vw" }}>
-                <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
+                <h1
+                  style={{
+                    fontSize: "28px",
+                    fontWeight: "700",
+                    marginBlockStart: "60px",
+                  }}
+                >
                   Viaggia senza limiti
                 </h1>
                 <h2 style={{ fontSize: "16px", marginBlockEnd: "30px" }}>
@@ -63,7 +101,16 @@ const OnePageHome = ({ children }) => {
                 <h3 style={{ fontSize: "16px", fontVariant: "all-small-caps" }}>
                   COUNT DOWN:
                 </h3>
-                <h3 style={{ fontSize: "28px" }}> 24 g : 8 ore : 11 m</h3>
+                <h3
+                  className={perLeAziendeModule.titleH3}
+                  style={{
+                    fontWeight: 700,
+                    margin: 0,
+                    marginTop: 8,
+                  }}
+                >
+                  {countdownTime}
+                </h3>
               </div>
             </div>
             <Image
@@ -86,7 +133,7 @@ const OnePageHome = ({ children }) => {
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             marginBlock: "60px",
             justifyContent: "space-around",
           }}
@@ -97,7 +144,9 @@ const OnePageHome = ({ children }) => {
               flexDirection: "column",
               justifyContent: "space-around",
               alignItems: "center",
-              width: "25%",
+              width: screenWindow.width < 600 ? "100%" : "25%",
+              marginInline: screenWindow.width < 600 ? "20px" : "0px",
+              marginBlockStart: screenWindow.width < 600 ? "20px" : "0px",
             }}
           >
             <Image
@@ -106,7 +155,14 @@ const OnePageHome = ({ children }) => {
               width="101px"
               height="100px"
             />
-            <h3 style={{ fontSize: "18px" }}>Viaggia a modo tuo</h3>
+            <h3
+              style={{
+                fontSize: "18px",
+                marginBlockStart: screenWindow.width < 600 ? "20px" : "0px",
+              }}
+            >
+              Viaggia a modo tuo
+            </h3>
             <p>
               Viaggia seguendo il tuo mood. Rendi i tuoi desideri e bisogni
               l’inizio di una nuova avventura.
@@ -119,7 +175,9 @@ const OnePageHome = ({ children }) => {
               flexDirection: "column",
               justifyContent: "space-around",
               alignItems: "center",
-              width: "25%",
+              width: screenWindow.width < 600 ? "100%" : "25%",
+              marginInline: screenWindow.width < 600 ? "20px" : "0px",
+              marginBlockStart: screenWindow.width < 600 ? "20px" : "0px",
             }}
           >
             <Image
@@ -128,7 +186,14 @@ const OnePageHome = ({ children }) => {
               width="101px"
               height="100px"
             />
-            <h3 style={{ fontSize: "18px" }}>Local experience</h3>
+            <h3
+              style={{
+                fontSize: "18px",
+                marginBlockStart: screenWindow.width < 600 ? "20px" : "0px",
+              }}
+            >
+              Local experience
+            </h3>
             <p>
               Affidati alla competenza delle guide turistiche locali e scopri le
               realtà tipiche del territorio.
@@ -140,7 +205,9 @@ const OnePageHome = ({ children }) => {
               flexDirection: "column",
               justifyContent: "space-around",
               alignItems: "center",
-              width: "25%",
+              width: screenWindow.width < 600 ? "100%" : "25%",
+              marginInlineStart: screenWindow.width < 600 ? "20px" : "0px",
+              marginBlockStart: screenWindow.width < 600 ? "20px" : "0px",
             }}
           >
             <Image
@@ -149,7 +216,14 @@ const OnePageHome = ({ children }) => {
               width="101px"
               height="100px"
             />
-            <h3 style={{ fontSize: "18px" }}>Community</h3>
+            <h3
+              style={{
+                fontSize: "18px",
+                marginBlockStart: screenWindow.width < 600 ? "20px" : "0px",
+              }}
+            >
+              Community
+            </h3>
             <p>
               Condividi viaggi ed itinerari con gli amici. Leggi le recensioni
               per garantirti ottime esperienze.
@@ -160,13 +234,19 @@ const OnePageHome = ({ children }) => {
           className="imgASinistra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
             marginBlock: "60px",
           }}
         >
-          <div className="Esplora" style={{ paddingInline: "20px" }}>
-            <div style={{ width: "50vw" }}>
+          <div
+            className="Esplora"
+            style={{
+              paddingInline: "20px",
+              marginBlockStart: screenWindow.width < 600 ? "60px" : "0px",
+            }}
+          >
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Esplora smart
               </h1>
@@ -184,7 +264,13 @@ const OnePageHome = ({ children }) => {
               </p>
             </div>
             <div
-              style={{ display: "flex", gap: "10", marginBlockStart: "20px" }}
+              style={{
+                display: "flex",
+                gap: "10",
+                marginBlockStart: "20px",
+                flexDirection: screenWindow.width > 600 ? "row" : "column",
+                alignItems: "center",
+              }}
             >
               <Image
                 src={milano}
@@ -232,7 +318,7 @@ const OnePageHome = ({ children }) => {
           className="imgADestra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
             marginBlock: "60px",
           }}
@@ -244,8 +330,14 @@ const OnePageHome = ({ children }) => {
             height="600px"
             objectFit="contain"
           />
-          <div className="Viaggia a modo tuo" style={{ paddingInline: "20px" }}>
-            <div style={{ width: "50vw" }}>
+          <div
+            className="Viaggia a modo tuo"
+            style={{
+              paddingInline: "20px",
+              marginBlockEnd: screenWindow.width < 600 ? "20px" : "0px",
+            }}
+          >
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Viaggia a modo tuo
               </h1>
@@ -268,13 +360,19 @@ const OnePageHome = ({ children }) => {
           className="imgASinistra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column",
             alignItems: "center",
             marginBlock: "60px",
           }}
         >
-          <div className="Local experience" style={{ paddingInline: "20px" }}>
-            <div style={{ width: "50vw" }}>
+          <div
+            className="Local experience"
+            style={{
+              paddingInline: "20px",
+              marginBlockEnd: screenWindow.width < 600 ? "20px" : "0px",
+            }}
+          >
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Local experience
               </h1>
@@ -302,7 +400,7 @@ const OnePageHome = ({ children }) => {
           className="imgADestra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
             marginBlock: "60px",
           }}
@@ -314,8 +412,14 @@ const OnePageHome = ({ children }) => {
             height="604px"
             objectFit="contain"
           />
-          <div className="Community" style={{ paddingInline: "20px" }}>
-            <div style={{ width: "50vw" }}>
+          <div
+            className="Community"
+            style={{
+              paddingInline: "20px",
+              marginBlockEnd: screenWindow.width < 600 ? "20px" : "0px",
+            }}
+          >
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>Community</h1>
               <p style={{ fontSize: "16px", textAlign: "start", margin: 0 }}>
                 Non sarai solo, la community è al tuo fianco. Scopri gli
@@ -333,7 +437,7 @@ const OnePageHome = ({ children }) => {
           className="imgASinistra"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: screenWindow.width > 600 ? "row" : "column-reverse",
             alignItems: "center",
             marginBlockStart: "60px",
           }}
@@ -349,7 +453,7 @@ const OnePageHome = ({ children }) => {
             className="Esplora senza limiti"
             style={{ paddingInline: "20px" }}
           >
-            <div style={{ width: "50vw" }}>
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Esplora senza limiti
               </h1>
@@ -365,8 +469,15 @@ const OnePageHome = ({ children }) => {
               <h3 style={{ fontSize: "16px", fontVariant: "all-small-caps" }}>
                 COUNT DOWN:
               </h3>
-              <h3 style={{ fontSize: "24px", marginBlockStart: "-10px" }}>
-                24 g : 8 ore : 11 m
+              <h3
+                className={perLeAziendeModule.titleH3}
+                style={{
+                  fontWeight: 700,
+                  margin: 0,
+                  marginTop: 8,
+                }}
+              >
+                {countdownTime}
               </h3>
               <button
                 style={{

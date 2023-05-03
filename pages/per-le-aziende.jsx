@@ -14,6 +14,7 @@ import supportersLogoBig from "../public/supporters-logos-big.png"
 import supportersLogoSmall from "../public/supporters-logos-small.png"
 import cardGradientWallpaper from "../public/card-gradient-wallpaper.png"
 import panchinaDegliInnamorati from "../public/panchina-degli-innamorati.png"
+import Footer from "../components/Footer"
 
 const PerLeAziende = () => {
   const defaultTextColor = "#02030C"
@@ -658,24 +659,7 @@ const PerLeAziende = () => {
           </div>
           {/* <div style={{ minHeight: 100 }} /> */}
         </header>
-        <footer
-          style={{
-            backgroundColor: "#9EA5FF",
-          }}
-        >
-          <Contatti />
-          <p
-            style={{
-              color: "#deefef",
-              width: "100%",
-              padding: "0px",
-              margin: "0px",
-              borderTop: "0px",
-            }}
-          >
-            Travelin srl - C.F. e Partita Iva 12738180012
-          </p>
-        </footer>
+        <Footer />
       </main>
     </>
   )
