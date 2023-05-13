@@ -15,10 +15,6 @@ import community0 from "../public/community0.png"
 import community from "../public/community.png"
 import filtraperincludere from "../public/filtraperincludere.png"
 import viaggiainclusivo from "../public/viaggiainclusivo.png"
-import milano from "../public/milano.png"
-import roma from "../public/roma.png"
-import torino from "../public/torino.png"
-import flussoUtente from "../public/flussoUtente.png"
 
 const ViaggiaInclusivoOnePage = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")

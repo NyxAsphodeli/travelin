@@ -3,10 +3,13 @@ import Image from "next/image"
 import perLeAziendeModule from "../styles/per-le-aziende.module.css"
 import { useRouter } from "next/router"
 import bg from "../public/bg.png"
-import bgBig from "../public/bgBig.png"
+import arrowDown from "../public/arrow-down.png"
 import homeMockup from "../public/home-mockup.png"
 import viaggiaAModoTuo from "../public/viaggia-a-modo-tuo.png"
 import viaggiaAModoTuo0 from "../public/viaggia-a-modo-tuo0.png"
+
+import supportersLogoBig from "../public/supporters-logos-big.png"
+import supportersLogoSmall from "../public/supporters-logos-small.png"
 import localExperience from "../public/local-experience.png"
 import localExperience0 from "../public/local-experience0.png"
 import community0 from "../public/community0.png"
@@ -16,7 +19,7 @@ import viaggiasenzalimiti from "../public/viaggiasenzalimiti.png"
 import milano from "../public/milano.png"
 import roma from "../public/roma.png"
 import torino from "../public/torino.png"
-import flussoUtente from "../public/flussoUtente.png"
+import flussoUtente from "../public/esplora-crea-condividi.png"
 
 const OnePageHome = ({ children }) => {
   const [screenWindow, setScreenWindow] = useState("")
@@ -64,7 +67,7 @@ const OnePageHome = ({ children }) => {
   if (screenWindow !== "") {
     console.log(screenWindow)
     return (
-      <header style={{ width: "100%" }}>
+      <header style={{ width: screenWindow.width < 600 ? "100%" : "80%" }}>
         <div
           style={{
             display: "flex",
@@ -76,14 +79,20 @@ const OnePageHome = ({ children }) => {
           <div
             style={{
               display: "flex",
-              flexDirection:
-                screenWindow.width > 600 ? "row" : "column-reverse",
+              flexDirection: screenWindow.width > 600 ? "row" : "column",
               alignItems: "center",
               marginBlockEnd: "30px",
             }}
           >
-            <div className="description" style={{ paddingInline: "20px" }}>
-              <div style={{ width: "50vw" }}>
+            <div
+              className="description"
+              style={{
+                paddingInline: "20px",
+              }}
+            >
+              <div
+                style={{ width: screenWindow.width < 600 ? "100%" : "40vw" }}
+              >
                 <h1
                   style={{
                     fontSize: "28px",
@@ -112,22 +121,66 @@ const OnePageHome = ({ children }) => {
                   {countdownTime}
                 </h3>
               </div>
+              <div>
+                <button
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "10px 28px",
+                    gap: "10px",
+                    background: "#2A36D8",
+                    color: "#ffffff",
+                    borderRadius: "5px",
+                    marginBlock: "20px",
+                    width: "70%",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Resta aggiornato
+                </button>
+              </div>
+              <div>
+                <a
+                  onClick={() => {
+                    // scroll to element with id "eslora-crea-condividi"
+                    document
+                      .getElementById("eslora-crea-condividi")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  <Image
+                    src={arrowDown}
+                    alt=""
+                    width={"55px"}
+                    height={"114px"}
+                  />
+                </a>
+              </div>
             </div>
             <Image
               src={homeMockup}
               alt="travelin app homepage mockup"
-              width="385.8px"
-              height="506.4px"
+              width="632px"
+              height="937px"
               style={{ position: "absolute", right: "0" }}
               objectFit="contain"
             />
           </div>
           <Image
+            id="eslora-crea-condividi"
             src={flussoUtente}
-            alt="Esplora, crea itinerari e condividili!"
-            width="3024px"
-            height="282px"
-            style={{ position: "absolute", left: "0", bottom: "0" }}
+            alt="Esplora: scopri luoghi ed itinerari. Crea: crea itinerari personalizzati. Condividi i tuoi viaggi con i tuoi amici!"
+            width="1194px"
+            height="234px"
+            style={{
+              position: "absolute",
+              left: "0",
+              bottom: "0",
+              paddingInline: "",
+            }}
           />
         </div>
         <div
@@ -246,7 +299,7 @@ const OnePageHome = ({ children }) => {
               marginBlockStart: screenWindow.width < 600 ? "60px" : "0px",
             }}
           >
-            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "80%" }}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Esplora smart
               </h1>
@@ -266,10 +319,11 @@ const OnePageHome = ({ children }) => {
             <div
               style={{
                 display: "flex",
-                gap: "10",
+                gap: "10px",
                 marginBlockStart: "20px",
                 flexDirection: screenWindow.width > 600 ? "row" : "column",
                 alignItems: "center",
+                width: screenWindow.width < 600 ? "100%" : "60%",
               }}
             >
               <Image
@@ -300,7 +354,8 @@ const OnePageHome = ({ children }) => {
                 color: "#ffffff",
                 borderRadius: "5px",
                 marginBlock: "20px",
-                width: "70%",
+                width: "60%",
+                textTransform: "uppercase",
               }}
             >
               Guarda la demo
@@ -333,11 +388,19 @@ const OnePageHome = ({ children }) => {
           <div
             className="Viaggia a modo tuo"
             style={{
-              paddingInline: "20px",
+              paddingInlineStart: "5%",
               marginBlockEnd: screenWindow.width < 600 ? "20px" : "0px",
+              width: screenWindow.width < 600 ? "100%" : "60%",
             }}
           >
-            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
+            <div
+              style={{
+                width: screenWindow.width < 600 ? "100%" : "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+              }}
+            >
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Viaggia a modo tuo
               </h1>
@@ -363,16 +426,17 @@ const OnePageHome = ({ children }) => {
             flexDirection: screenWindow.width > 600 ? "row" : "column",
             alignItems: "center",
             marginBlock: "60px",
+            width: screenWindow.width < 600 ? "100%" : "100%",
           }}
         >
           <div
             className="Local experience"
             style={{
               paddingInline: "20px",
-              marginBlockEnd: screenWindow.width < 600 ? "20px" : "0px",
+              marginBlockStart: screenWindow.width < 600 ? "60px" : "0px",
             }}
           >
-            <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
+            <div style={{ width: screenWindow.width < 600 ? "100%" : "80%" }}>
               <h1 style={{ fontSize: "28px", fontWeight: "700" }}>
                 Local experience
               </h1>
@@ -391,8 +455,8 @@ const OnePageHome = ({ children }) => {
           <Image
             src={localExperience}
             alt="travelin app local experience mockup"
-            width="607px"
-            height="600px"
+            width="905px"
+            height="901px"
             objectFit="contain"
           />
         </div>
@@ -415,8 +479,9 @@ const OnePageHome = ({ children }) => {
           <div
             className="Community"
             style={{
-              paddingInline: "20px",
+              paddingInlineStart: "5%",
               marginBlockEnd: screenWindow.width < 600 ? "20px" : "0px",
+              width: screenWindow.width < 600 ? "100%" : "60%",
             }}
           >
             <div style={{ width: screenWindow.width < 600 ? "100%" : "100%" }}>
@@ -431,6 +496,30 @@ const OnePageHome = ({ children }) => {
                 la garanzia di trovarti nel posto giusto al momento giusto.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="Al nostro fianco" style={{ marginBlockEnd: "60px" }}>
+          <h1
+            style={{ fontSize: "28px", fontWeight: "700", textAlign: "center" }}
+          >
+            Sono al nostro fianco
+          </h1>
+          <div style={{ width: "100%", marginTop: 32 }}>
+            {screenWindow.width > 600 ? (
+              <Image
+                alt="supporters logos"
+                src={supportersLogoBig}
+                width={"1778px"}
+                height={"303px"}
+              />
+            ) : (
+              <Image
+                alt="supporters logos"
+                src={supportersLogoSmall}
+                width={"877px"}
+                height={"390px"}
+              />
+            )}
           </div>
         </div>
         <div
@@ -492,6 +581,7 @@ const OnePageHome = ({ children }) => {
                   borderRadius: "5px",
                   width: "70%",
                   marginBlock: "20px",
+                  textTransform: "uppercase",
                 }}
               >
                 Resta aggiornato
