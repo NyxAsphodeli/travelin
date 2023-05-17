@@ -62,7 +62,7 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
   if (screenWindow !== "") {
     console.log(screenWindow)
     return (
-      <header style={{ width: "100%" }}>
+      <header style={{ width: screenWindow.width < 600 ? "100%" : "80%" }}>
         <div
           className="imgASinistra"
           style={{

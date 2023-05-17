@@ -79,7 +79,8 @@ const OnePageHome = ({ children }) => {
           <div
             style={{
               display: "flex",
-              flexDirection: screenWindow.width > 600 ? "row" : "column",
+              flexDirection:
+                screenWindow.width > 600 ? "row" : "column-reverse",
               alignItems: "center",
               marginBlockEnd: "30px",
             }}

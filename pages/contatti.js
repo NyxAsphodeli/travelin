@@ -1,6 +1,6 @@
 import Image from "next/image"
 import travelinlight from "../public/travelinlight.png"
-import insta from "../public/insta.png"
+import insta from "../public/logo-insta.png"
 import share from "../public/share.png"
 import styles from "../styles/Home.module.css"
 function Contatti() {
