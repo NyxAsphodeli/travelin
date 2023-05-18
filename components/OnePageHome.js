@@ -22,6 +22,7 @@ import torino from "../public/torino.png"
 import flussoUtente from "../public/esplora-crea-condividi.png"
 
 const OnePageHome = ({ children }) => {
+  const router = useRouter()
   const [screenWindow, setScreenWindow] = useState("")
   const [backgroundImage, setBackgroundImage] = useState({ bg })
   // countdown date
@@ -137,6 +138,10 @@ const OnePageHome = ({ children }) => {
                     marginBlock: "20px",
                     width: "70%",
                     textTransform: "uppercase",
+                  }}
+                  onClick={() => {
+                    // open link http://travelin.me to new tab
+                    window.open("http://travelin.me", "_blank")
                   }}
                 >
                   Resta aggiornato
@@ -358,6 +363,10 @@ const OnePageHome = ({ children }) => {
                 width: "60%",
                 textTransform: "uppercase",
               }}
+              onClick={() => {
+                // open link http://travelin.me to new tab
+                window.open("http://travelin.me", "_blank")
+              }}
             >
               Guarda la demo
             </button>
@@ -569,6 +578,16 @@ const OnePageHome = ({ children }) => {
               >
                 {countdownTime}
               </h3>
+              <p
+                style={{
+                  fontSize: "16px",
+                  textAlign: "start",
+                  margin: 0,
+                  marginBlockStart: "30px",
+                }}
+              >
+                Scopri di più:
+              </p>
               <button
                 style={{
                   display: "flex",
@@ -584,8 +603,34 @@ const OnePageHome = ({ children }) => {
                   marginBlock: "20px",
                   textTransform: "uppercase",
                 }}
+                onClick={() => {
+                  // load page /viaggia-inclusivo
+                  router.push("/viaggia-inclusivo")
+                }}
               >
-                Resta aggiornato
+                Viaggia Inclusivo
+              </button>
+              <button
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "5px 28px",
+                  gap: "10px",
+                  background: "#2A36D8",
+                  color: "#ffffff",
+                  borderRadius: "5px",
+                  width: "70%",
+                  marginBlock: "20px",
+                  textTransform: "uppercase",
+                }}
+                onClick={() => {
+                  // load page /per-le-aziende
+                  router.push("/per-le-aziende")
+                }}
+              >
+                Per Le Aziende
               </button>
             </div>
           </div>
