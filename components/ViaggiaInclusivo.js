@@ -17,6 +17,8 @@ import filtraperincludere from "../public/filtraperincludere.png"
 import viaggiainclusivo from "../public/viaggiainclusivo.png"
 
 const ViaggiaInclusivoOnePage = ({ children }) => {
+  const router = useRouter()
+
   const [screenWindow, setScreenWindow] = useState("")
   const [backgroundImage, setBackgroundImage] = useState({ bg })
   // countdown date
@@ -285,7 +287,7 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
               </p>
               <br></br>
             </div>
-            <div>
+            {/* <div>
               <h3 style={{ fontSize: "16px", fontVariant: "all-small-caps" }}>
                 COUNT DOWN:
               </h3>
@@ -314,9 +316,63 @@ const ViaggiaInclusivoOnePage = ({ children }) => {
                   marginBlock: "20px",
                 }}
               >
-                Resta aggiornato
+                Entra nella piattaforma
               </button>
-            </div>
+            </div> */}
+            <p
+              style={{
+                fontSize: "16px",
+                textAlign: "start",
+                margin: 0,
+                marginBlockStart: "30px",
+              }}
+            >
+              Scopri di più:
+            </p>
+            <button
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "5px 28px",
+                gap: "10px",
+                background: "#2A36D8",
+                color: "#ffffff",
+                borderRadius: "5px",
+                width: "70%",
+                marginBlock: "20px",
+                textTransform: "uppercase",
+              }}
+              onClick={() => {
+                // load page /
+                router.push("/")
+              }}
+            >
+              Home
+            </button>
+            <button
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "5px 28px",
+                gap: "10px",
+                background: "#2A36D8",
+                color: "#ffffff",
+                borderRadius: "5px",
+                width: "70%",
+                marginBlock: "20px",
+                textTransform: "uppercase",
+              }}
+              onClick={() => {
+                // load page /per-le-aziende
+                router.push("/per-le-aziende")
+              }}
+            >
+              Per Le Aziende
+            </button>
           </div>
         </div>
       </header>

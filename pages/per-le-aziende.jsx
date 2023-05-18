@@ -15,8 +15,9 @@ import supportersLogoSmall from "../public/supporters-logos-small.png"
 import cardGradientWallpaper from "../public/card-gradient-wallpaper.png"
 import panchinaDegliInnamorati from "../public/panchina-degli-innamorati.png"
 import Footer from "../components/Footer"
-
+import { useRouter } from "next/router"
 const PerLeAziende = () => {
+  const router = useRouter()
   const defaultTextColor = "#02030C"
 
   // event on window resize
@@ -632,6 +633,61 @@ const PerLeAziende = () => {
                   Crea la tua nuova avventura!
                 </p>
                 <p
+                  style={{
+                    fontSize: "16px",
+                    textAlign: "start",
+                    margin: 0,
+                    marginBlockStart: "30px",
+                  }}
+                >
+                  Scopri di più:
+                </p>
+                <button
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "5px 28px",
+                    gap: "10px",
+                    background: "#2A36D8",
+                    color: "#ffffff",
+                    borderRadius: "5px",
+                    width: "70%",
+                    marginBlock: "20px",
+                    textTransform: "uppercase",
+                  }}
+                  onClick={() => {
+                    // load page home
+                    router.push("/")
+                  }}
+                >
+                  Home
+                </button>
+                <button
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "5px 28px",
+                    gap: "10px",
+                    background: "#2A36D8",
+                    color: "#ffffff",
+                    borderRadius: "5px",
+                    width: "70%",
+                    marginBlock: "20px",
+                    textTransform: "uppercase",
+                  }}
+                  onClick={() => {
+                    // load page /viaggia-inclusivo
+                    router.push("/viaggia-inclusivo")
+                  }}
+                >
+                  Viaggia Inclusivo
+                </button>
+
+                {/* <p
                   className={perLeAziendeModule.subtitle}
                   style={{
                     fontWeight: 900,
@@ -653,7 +709,7 @@ const PerLeAziende = () => {
                   }}
                 >
                   {countdownTime}
-                </h3>
+                </h3> */}
               </div>
             </div>
           </div>

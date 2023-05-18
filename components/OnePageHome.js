@@ -108,7 +108,7 @@ const OnePageHome = ({ children }) => {
                   Scopri, crea e condividi i tuoi itinerari
                 </h2>
               </div>
-              <div>
+              {/*  <div>
                 <h3 style={{ fontSize: "16px", fontVariant: "all-small-caps" }}>
                   COUNT DOWN:
                 </h3>
@@ -122,7 +122,7 @@ const OnePageHome = ({ children }) => {
                 >
                   {countdownTime}
                 </h3>
-              </div>
+              </div> */}
               <div>
                 <button
                   style={{
@@ -144,7 +144,7 @@ const OnePageHome = ({ children }) => {
                     window.open("http://travelin.me", "_blank")
                   }}
                 >
-                  Resta aggiornato
+                  Entra nella piattaforma
                 </button>
               </div>
               <div>
@@ -368,7 +368,7 @@ const OnePageHome = ({ children }) => {
                 window.open("http://travelin.me", "_blank")
               }}
             >
-              Guarda la demo
+              Entra nella piattaforma
             </button>
           </div>
           <Image
@@ -564,7 +564,7 @@ const OnePageHome = ({ children }) => {
               </p>
               <br></br>
             </div>
-            <div>
+            {/* <div>
               <h3 style={{ fontSize: "16px", fontVariant: "all-small-caps" }}>
                 COUNT DOWN:
               </h3>
@@ -632,7 +632,61 @@ const OnePageHome = ({ children }) => {
               >
                 Per Le Aziende
               </button>
-            </div>
+            </div> */}
+            <p
+              style={{
+                fontSize: "16px",
+                textAlign: "start",
+                margin: 0,
+                marginBlockStart: "30px",
+              }}
+            >
+              Scopri di più:
+            </p>
+            <button
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "5px 28px",
+                gap: "10px",
+                background: "#2A36D8",
+                color: "#ffffff",
+                borderRadius: "5px",
+                width: "70%",
+                marginBlock: "20px",
+                textTransform: "uppercase",
+              }}
+              onClick={() => {
+                // load page /viaggia-inclusivo
+                router.push("/viaggia-inclusivo")
+              }}
+            >
+              Viaggia Inclusivo
+            </button>
+            <button
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "5px 28px",
+                gap: "10px",
+                background: "#2A36D8",
+                color: "#ffffff",
+                borderRadius: "5px",
+                width: "70%",
+                marginBlock: "20px",
+                textTransform: "uppercase",
+              }}
+              onClick={() => {
+                // load page /per-le-aziende
+                router.push("/per-le-aziende")
+              }}
+            >
+              Per Le Aziende
+            </button>
           </div>
         </div>
       </header>
