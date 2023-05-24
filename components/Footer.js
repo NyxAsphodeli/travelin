@@ -25,6 +25,7 @@ const Footer = () => {
           onClick={() => {
             window.open("https://www.instagram.com/travelin_ita/", "_blank")
           }}
+          style={{ cursor: "pointer" }}
         />
         <Image
           src={logoLinkedin}
@@ -37,6 +38,7 @@ const Footer = () => {
               "_blank"
             )
           }}
+          style={{ cursor: "pointer" }}
         />
       </div>
       {/* <Contatti /> */}
