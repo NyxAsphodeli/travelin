@@ -23,7 +23,7 @@ const Footer = () => {
           width="48px"
           height="50px"
           onClick={() => {
-            window.open("https://www.instagram.com/travelinitaly/", "_blank")
+            window.open("https://www.instagram.com/travelin_ita/", "_blank")
           }}
         />
         <Image
