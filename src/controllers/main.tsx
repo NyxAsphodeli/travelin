@@ -1,4 +1,3 @@
-import React from "react"
 import { createContext, ReactNode, useEffect, useState } from "react"
 
 interface MainContextInterface {

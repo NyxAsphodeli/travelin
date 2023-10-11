@@ -1,4 +1,3 @@
-import React from "react"
 import { Stack } from "@mui/material"
 import travelinLogo from "../assets/images/travelin-logo.svg"
 import { useContext, useState } from "react"
