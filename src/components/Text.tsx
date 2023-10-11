@@ -1,3 +1,4 @@
+import React from "react"
 import { CSSProperties, ReactNode } from "react"
 import { colors } from "../services/config"
 

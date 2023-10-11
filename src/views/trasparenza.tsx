@@ -1,3 +1,4 @@
+import React from "react"
 import { useContext, useEffect, useState } from "react"
 import PageContainer from "../components/PageContainer"
 import { MainContext } from "../controllers/main"

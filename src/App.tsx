@@ -1,3 +1,4 @@
+import React from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { MainController } from "./controllers/main"
 import Home from "./views/home"
