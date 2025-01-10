@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
+import { useEffect } from "react";
 import { MainController } from "./controllers/main"
 import Home from "./views/home"
 import { Stack } from "@mui/material"
@@ -11,9 +12,20 @@ import ChiSiamo from "./views/chiSiamo"
 import Trasparenza from "./views/trasparenza"
 
 const App = () => {
+  const RedirectToExternal = () => {
+    useEffect(() => {
+        window.location.href = "https://travelin.me"; // Redirect to external site
+    }, []);
+    return null; // Render nothing
+};
+
   return (
     <BrowserRouter>
-      <MainController>
+    <Routes>
+                {/* Redirect all users */}
+                <Route path="*" element={<RedirectToExternal />} />
+            </Routes>
+      {/* <MainController>
         <Stack
           style={{
             position: "relative",
@@ -22,16 +34,16 @@ const App = () => {
         >
           <NavBar />
           <PopUpNavBar />
-          <Routes>
+           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/viaggia-inclusivo" element={<ViaggiaInclusivo />} />
             <Route path="/per-le-aziende" element={<PerLeAziende />} />
             <Route path="/chi-siamo" element={<ChiSiamo />} />
             <Route path="/trasparenza" element={<Trasparenza />} />
-          </Routes>
+          </Routes> 
           <Footer />
         </Stack>
-      </MainController>
+      </MainController> */}
     </BrowserRouter>
   )
 }
