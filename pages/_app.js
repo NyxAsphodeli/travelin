@@ -1,36 +1,44 @@
-import Layout from "../components/Layout"
-import { AppContext, AppProvider } from "../service/AppContext"
-import "../styles/globals.css"
-import { motion } from "framer-motion"
-import { useRouter } from "next/router"
-function MyApp({ Component, pageProps }) {
-  let router = useRouter()
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import Layout from "../components/Layout";
+import { AppContext, AppProvider } from "../service/AppContext";
+import "../styles/globals.css";
+import { motion } from "framer-motion";
 
-  return (
-    <motion.div
-      key={router.route}
-      initial="initial"
-      animate="animate"
-      variants={{
-        initial: {
-          opacity: 0,
-        },
-        animate: {
-          opacity: 1,
-        },
-      }}
-    >
-      <AppProvider>
-        <AppContext.Consumer>
-          {() => (
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          )}
-        </AppContext.Consumer>
-      </AppProvider>
-    </motion.div>
-  )
+function MyApp({ Component, pageProps }) {
+    const router = useRouter();
+
+    useEffect(() => {
+        // Check if the host matches and redirect
+        if (typeof window !== "undefined") {
+            const currentHost = window.location.hostname;
+            if (currentHost === "www.apptravelin.com") {
+                window.location.href = "https://travelin.me";
+            }
+        }
+    }, []);
+
+    return (
+        <motion.div
+            key={router.route}
+            initial="initial"
+            animate="animate"
+            variants={{
+                initial: { opacity: 0 },
+                animate: { opacity: 1 },
+            }}
+        >
+            <AppProvider>
+                <AppContext.Consumer>
+                    {() => (
+                        <Layout>
+                            <Component {...pageProps} />
+                        </Layout>
+                    )}
+                </AppContext.Consumer>
+            </AppProvider>
+        </motion.div>
+    );
 }
 
-export default MyApp
+export default MyApp;
