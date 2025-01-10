@@ -12,9 +12,9 @@ module.exports = {
       return [
           {
               source: "/:path*", // Matches all paths
-              has: [{ type: "host", value: "www.apptravelin.com" }], // Match specific host
-              destination: "https://travelin.me/:path*", // Redirect to the target domain
-              permanent: true,
+              has: [{ type: "host", value: "www.apptravelin.com" }], // Match your host
+              destination: "https://travelin.me/:path*", // Redirect to the target site
+              permanent: true, // Use a permanent redirect (301)
           },
       ];
   },
