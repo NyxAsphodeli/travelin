@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
         // Check if the host matches and redirect
         if (typeof window !== "undefined") {
             const currentHost = window.location.hostname;
-            if (currentHost === "www.apptravelin.com") {
+            if (currentHost === "travelin-official-website-git-prod-nyxasphodelis-projects.vercel.app") {
                 window.location.href = "https://travelin.me";
             }
         }
